@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 1: Odoo Core Architecture & ORM Internals
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 02: Performance & PostgreSQL](02-performance-and-database.md)
+
+---
+
 ### 1. High-Level Engine Architecture
 The Odoo engine operates on a three-tier architecture model: presentation (client), logic (application server), and data (database). 
 
@@ -145,3 +149,7 @@ class ProjectTask(models.Model):
 > 📺 **Video:** Odoo Module Development Tutorial https://www.youtube.com/@Odoo
 > 📖 **Docs:** https://www.odoo.com/documentation/17.0/developer/tutorials/server_framework_101.html
 > 💡 **Interview Tip:** _inherit vs _inherits difference is a classic interview question
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 02: Performance & PostgreSQL](02-performance-and-database.md)

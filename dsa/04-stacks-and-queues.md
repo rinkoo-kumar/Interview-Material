@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 4: Stacks, Queues & Monotonic Stack Mastery
 
+> 🧭 **Navigation**: [⬅️ Previous: 03: Linked Lists](03-linked-lists.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 05: Binary Search](05-binary-search.md)
+
+---
+
 Stacks and Queues manage ordered access constraints. The **Monotonic Stack** and **Monotonic Queue** patterns are crucial for solving range extrema and histogram geometry problems in optimal $O(N)$ time.
 
 ---
@@ -237,3 +241,7 @@ public class SlidingWindowMax {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 03: Linked Lists](03-linked-lists.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 05: Binary Search](05-binary-search.md)

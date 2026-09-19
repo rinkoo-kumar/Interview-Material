@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 6: Autonomous AI Agents, Multi-Agent Systems & Model Context Protocol (MCP)
 
+> 🧭 **Navigation**: [⬅️ Previous: 05: Fine-Tuning & PEFT](05-fine-tuning-and-peft.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 07: LLMOps, Evals & Guardrails](07-llmops-evals-and-guardrails.md)
+
+---
+
 As Generative AI matures from passive question-answering chat interfaces into autonomous systems that plan, invoke enterprise APIs, and coordinate across multi-agent workflows, Senior AI Engineers must master the mechanics of agentic loops, state machines, tool calling schemas, and the open standard **Model Context Protocol (MCP)**.
 
 ---
@@ -196,3 +200,7 @@ print("MCP Server initialized with tool: query_warehouse_stock")
 > - LangChain Blog: https://blog.langchain.dev
 > - Anthropic Tool Use Docs: https://www.anthropic.com/research/tool-use
 > - MCP Official Spec: https://github.com/modelcontextprotocol/specification
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 05: Fine-Tuning & PEFT](05-fine-tuning-and-peft.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 07: LLMOps, Evals & Guardrails](07-llmops-evals-and-guardrails.md)

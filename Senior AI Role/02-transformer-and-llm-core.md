@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 2: Transformer Architecture, LLM Mechanics & Production Inference
 
+> 🧭 **Navigation**: [⬅️ Previous: 01: ML & DL Foundations](01-ml-dl-foundations.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 03: Prompting & Structured I/O](03-prompting-and-structured-io.md)
+
+---
+
 Understanding the mathematical internals of the Transformer and the memory physics of LLM serving is what separates a generic developer from a Senior AI Systems Engineer. In technical interviews, expect deep scrutiny into attention variants, KV cache calculations, and serving optimizations.
 
 ---
@@ -212,3 +216,7 @@ assert load_4bit_model() == True
 
 > 📖 **Must-Read Resources**
 > - HuggingFace Quantization Docs: https://huggingface.co/docs/transformers/quantization
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 01: ML & DL Foundations](01-ml-dl-foundations.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 03: Prompting & Structured I/O](03-prompting-and-structured-io.md)

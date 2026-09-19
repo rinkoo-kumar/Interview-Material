@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 9: Dynamic Programming (1D, 2D & State Optimization)
 
+> 🧭 **Navigation**: [⬅️ Previous: 08: Graphs & Union-Find](08-graphs-and-union-find.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 10: Backtracking & Greedy](10-backtracking-and-greedy.md)
+
+---
+
 Dynamic Programming (DP) is the algorithmic strategy of breaking a complex problem into smaller overlapping subproblems, solving each subproblem once, and storing its solution.
 
 ---
@@ -240,3 +244,7 @@ public class EditDistance {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 08: Graphs & Union-Find](08-graphs-and-union-find.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 10: Backtracking & Greedy](10-backtracking-and-greedy.md)

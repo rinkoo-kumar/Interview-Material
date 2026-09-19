@@ -1,6 +1,10 @@
 # 500 Master Questions Bank: Volume 5
 ## 75 Odoo Technical Lead & PostgreSQL Architect Interview Questions
 
+> 🧭 **Navigation**: [⬅️ Previous: Volume 4: 75 Techno-Functional Questions](04-techno-functional-75-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | End of Track ⇥
+
+---
+
 This volume contains **75 deep technical questions and answers** tailored for Senior Odoo Developers, Technical Leads, and Python/PostgreSQL Systems Architects. It covers framework internals, WSGI/Gevent worker mechanics, ORM prefetching and cache graphs, PostgreSQL query planning and concurrency locks, OWL 2 component lifecycles, enterprise MCP/REST APIs, and zero-downtime version migrations.
 
 ---
@@ -694,3 +698,7 @@ This volume contains **75 deep technical questions and answers** tailored for Se
   3. **Architectural Code Reviews**: Review PRs focusing on database query efficiency, prefetching preservation, index usage, and upgrade-safe extension patterns.
   4. **Continuous Upgradability**: Enforce strict separation between enterprise core modules and custom repositories; prohibit modifying core files directly.
   5. **Disaster Recovery & Post-Mortems**: Lead blameless post-mortems on production incidents, instrument continuous APM monitoring, and maintain actionable runbooks for database failovers and rollback procedures.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Volume 4: 75 Techno-Functional Questions](04-techno-functional-75-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | End of Track ⇥

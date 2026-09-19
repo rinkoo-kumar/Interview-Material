@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 7: Complete LLD: In-Memory Transactional Key-Value Store
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 06: BookMyShow Booking](06-movie-ticket-booking-bookmyshow.md) | [🏠 System Design Track Index](../README.md) | End of Track ⇥
+
+---
+
 Designing an In-Memory Key-Value Store with full **ACID Transaction Support** (`BEGIN`, `COMMIT`, `ROLLBACK`, including **Nested Transactions**) is a classic machine coding and systems interview question at Apple, Databricks, Stripe, and Microsoft.
 
 ---
@@ -191,3 +195,7 @@ public class TransactionalKVStore {
 > 📖 **Must-Read Resources**
 > - Redis Transactions: https://redis.io/docs/interact/transactions/
 > - etcd Documentation: https://etcd.io/docs/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 06: BookMyShow Booking](06-movie-ticket-booking-bookmyshow.md) | [🏠 System Design Track Index](../README.md) | End of Track ⇥

@@ -1,6 +1,10 @@
 # DSA Track: Practical Code Solutions Pack 1
 ## Arrays, Strings, Prefix Sum & Sliding Window (Python & Java)
 
+> 🧭 **Navigation**: [⬅️ Previous: 11: Top 50 LeetCode Patterns](11-top-50-dsa-interview-problems.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 2: Trees & Graphs](solutions-pack-2-trees-graphs-heaps.md)
+
+---
+
 This pack provides complete, runnable, production-grade implementations for the most frequently asked Array, String, and Sliding Window interview questions at Google, Meta, Amazon, and Microsoft.
 
 ---
@@ -343,3 +347,7 @@ public class SortColors {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 11: Top 50 LeetCode Patterns](11-top-50-dsa-interview-problems.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 2: Trees & Graphs](solutions-pack-2-trees-graphs-heaps.md)

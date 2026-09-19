@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 7: LLMOps, Automated Evaluation, Guardrails & Production Economics
 
+> 🧭 **Navigation**: [⬅️ Previous: 06: AI Agents & MCP](06-ai-agents-and-mcp.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 08: Top 50+ AI Interview Q&A](08-top-50-ai-interview-questions.md)
+
+---
+
 Deploying an AI prototype in a Jupyter notebook is trivial; running a resilient, cost-effective, audited, and safe GenAI platform in production is a severe engineering discipline. Senior and Staff AI interviewers rigorously test candidates on their ability to build robust LLMOps pipelines, implement safety guardrails, optimize inference costs with caching, and establish automated evaluation metrics.
 
 ---
@@ -196,3 +200,7 @@ print(f"CACHE HIT: {cached}")
 > - Arize Phoenix Docs: https://docs.arize.com/phoenix/
 > - Nvidia NeMo Guardrails Docs: https://github.com/NVIDIA/NeMo-Guardrails
 > - Ragas Documentation: https://docs.ragas.io/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 06: AI Agents & MCP](06-ai-agents-and-mcp.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 08: Top 50+ AI Interview Q&A](08-top-50-ai-interview-questions.md)

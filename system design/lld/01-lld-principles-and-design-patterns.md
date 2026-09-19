@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 1: SOLID Principles & Essential GoF Design Patterns
 
+> 🧭 **Navigation**: [⬅️ Previous: HLD 05: Twitter News Feed](../hld/05-twitter-news-feed-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 02: Parking Lot System](02-parking-lot-system.md)
+
+---
+
 In Low-Level Design (LLD) interviews (also known as Object-Oriented Design or Machine Coding), interviewers assess your ability to write modular, extensible, maintainable, and testable code. They look for strict adherence to SOLID principles, thoughtful application of Design Patterns, and thread-safe implementation.
 
 ---
@@ -322,3 +326,7 @@ Allows an object to alter its behavior when its internal state changes. The obje
 > - Refactoring.guru Design Patterns: https://refactoring.guru/design-patterns
 > - The System Design Primer: https://github.com/donnemartin/system-design-primer
 > - LeetCode Design Problems: https://leetcode.com/tag/design/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: HLD 05: Twitter News Feed](../hld/05-twitter-news-feed-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 02: Parking Lot System](02-parking-lot-system.md)

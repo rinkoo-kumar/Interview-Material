@@ -1,6 +1,10 @@
 # Track 3: System Design — High-Level Design (HLD)
 ## Chapter 1: High-Level Design Framework & Component Architecture
 
+> 🧭 **Navigation**: [⬅️ Previous: 07: Interview Framework & Rubrics](../07-interview-framework-and-rubrics.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 02: Uber / Lyft](02-ride-sharing-uber-lyft.md)
+
+---
+
 High-Level Design (HLD) interviews assess your ability to architect end-to-end distributed systems. The goal is not writing code, but mapping business requirements to scalable, decoupled components, establishing data boundaries, and guaranteeing high availability.
 
 ---
@@ -185,3 +189,7 @@ public class CircuitBreakerDemo {
 > 📖 **Must-Read Resources**
 > - Amazon Prime Video Blog: Monolith migration - https://www.primevideotech.com/video-streaming/scaling-up-the-audio-video-monitoring-service-and-reducing-costs-by-90
 > - Martin Fowler: Circuit Breaker - https://martinfowler.com/bliki/CircuitBreaker.html
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 07: Interview Framework & Rubrics](../07-interview-framework-and-rubrics.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 02: Uber / Lyft](02-ride-sharing-uber-lyft.md)

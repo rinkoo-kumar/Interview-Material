@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 1: Fundamentals of Scalability, CAP/PACELC & Consistency Models
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 System Design Track Index](README.md) | [➡️ Next: 02: Networking, Proxies & Gateways](02-networking-and-proxies.md)
+
+---
+
 Every scalable architecture begins with trade-offs. There is no such thing as a "perfect" distributed system; every architectural decision trades latency, consistency, availability, or operational complexity.
 
 ---
@@ -320,3 +324,7 @@ class Database {
 > 📖 **Must-Read Resources**
 > - Meta Engineering: Scaling Facebook - https://engineering.fb.com
 > - Jepsen: Consistency Models - https://jepsen.io/consistency
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 System Design Track Index](README.md) | [➡️ Next: 02: Networking, Proxies & Gateways](02-networking-and-proxies.md)

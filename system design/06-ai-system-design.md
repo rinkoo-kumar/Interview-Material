@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 6: AI Systems Design: Scalable RAG, Recommendation Engines & LLM Gateways
 
+> 🧭 **Navigation**: [⬅️ Previous: 05: Classic Case Studies](05-classic-case-studies.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 07: Interview Framework & Rubrics](07-interview-framework-and-rubrics.md)
+
+---
+
 As AI transitions from standalone prototypes to core enterprise infrastructure, system design interviews increasingly feature AI-native architectures. You must be prepared to scale embedding pipelines, vector search clusters, feature stores, and resilient model proxies.
 
 ---
@@ -164,3 +168,7 @@ graph TD
 > 📖 **Must-Read Resources**
 > - Cloudflare Blog: Announcing AI Gateway - https://blog.cloudflare.com
 > - OpenAI API Documentation: Production Best Practices - https://platform.openai.com/docs/guides/production-best-practices
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 05: Classic Case Studies](05-classic-case-studies.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 07: Interview Framework & Rubrics](07-interview-framework-and-rubrics.md)

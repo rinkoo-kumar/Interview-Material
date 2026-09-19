@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 5: APIs, External Integrations & Model Context Protocol
 
+> 🧭 **Navigation**: [⬅️ Previous: 04: OWL 2 & Frontend](04-owl-and-qweb-frontend.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 06: Migrations & DevOps](06-migrations-and-devops.md)
+
+---
+
 ### 1. JSON-RPC API Deep Dive
 - **Endpoint:** `POST /web/dataset/call_kw` is the central gateway for JSON-RPC in Odoo.
 - **Auth:** Requires either a session cookie (from `POST /web/session/authenticate`) OR an `api_key` Bearer token (available in Odoo 16+).
@@ -166,3 +170,7 @@ graph LR
 
 > 📖 **Docs:** https://modelcontextprotocol.io
 > 💡 **Interview Tip:** MCP is the hottest topic in 2025 for AI+ERP integration.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 04: OWL 2 & Frontend](04-owl-and-qweb-frontend.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 06: Migrations & DevOps](06-migrations-and-devops.md)

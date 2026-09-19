@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 4: OWL 2 Framework, QWeb Templates & Frontend Architecture
 
+> 🧭 **Navigation**: [⬅️ Previous: 03: Security & Multi-Company](03-security-and-multi-company.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 05: APIs, Integrations & MCP](05-apis-integrations-and-mcp.md)
+
+---
+
 ### 1. OWL 2 Component Architecture
 - **Reactive component framework:** Odoo Web Library (OWL) 2 is Odoo's custom frontend framework.
 - **Component = Class + Template:** Components are ES6 classes linked to QWeb templates via a static `template` property.
@@ -89,3 +93,7 @@ graph LR
 - **Services:** Global instances for capabilities like ORM, notifications, router. E.g., `useService('orm')` for server calls, `useService('notification')` for toasts.
 - **Client Actions:** Client-side routing allows navigating between components via action manager.
 - **Store:** The `useStore` hook is for accessing Odoo's global state (user, company, etc.) across components.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 03: Security & Multi-Company](03-security-and-multi-company.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 05: APIs, Integrations & MCP](05-apis-integrations-and-mcp.md)

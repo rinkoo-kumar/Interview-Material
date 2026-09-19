@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 3: Linked Lists, Fast & Slow Pointers & In-Place Reversals
 
+> 🧭 **Navigation**: [⬅️ Previous: 02: Two Pointers & Sliding Window](02-two-pointers-and-sliding-window.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 04: Stacks & Queues](04-stacks-and-queues.md)
+
+---
+
 Linked Lists evaluate pointer manipulation, reference passing, and edge-case handling without array-indexed random access.
 
 ---
@@ -226,3 +230,7 @@ public class ReorderList {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 02: Two Pointers & Sliding Window](02-two-pointers-and-sliding-window.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 04: Stacks & Queues](04-stacks-and-queues.md)

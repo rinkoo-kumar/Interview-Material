@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 6: Version Migrations, DevOps & CI/CD
 
+> 🧭 **Navigation**: [⬅️ Previous: 05: APIs, Integrations & MCP](05-apis-integrations-and-mcp.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 07: Technical Leadership](07-technical-leadership.md)
+
+---
+
 ### 1. OpenUpgrade Version Migrations
 - **Script structure:** `pre_migrate()` (runs before ORM loads), `migrate()` (during), `post_migrate()` (after).
 
@@ -122,3 +126,7 @@ class TestSaleOrderWorkflow(TransactionCase):
 ```
 
 > 📖 **Docs:** https://www.odoo.com/documentation/17.0/developer/reference/backend/testing.html
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 05: APIs, Integrations & MCP](05-apis-integrations-and-mcp.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 07: Technical Leadership](07-technical-leadership.md)

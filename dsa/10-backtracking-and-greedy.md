@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 10: Backtracking & Greedy Algorithms
 
+> 🧭 **Navigation**: [⬅️ Previous: 09: Dynamic Programming](09-dynamic-programming.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 11: Top 50 LeetCode Patterns](11-top-50-dsa-interview-problems.md)
+
+---
+
 Backtracking systematically searches state-space trees by trying choices and pruning invalid paths, whereas Greedy algorithms make the locally optimal choice at every step without ever looking back.
 
 ---
@@ -269,3 +273,7 @@ public class JumpGame {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 09: Dynamic Programming](09-dynamic-programming.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 11: Top 50 LeetCode Patterns](11-top-50-dsa-interview-problems.md)

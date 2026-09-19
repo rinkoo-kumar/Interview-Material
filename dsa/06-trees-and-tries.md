@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 6: Trees, Binary Search Trees & Prefix Trees (Tries)
 
+> 🧭 **Navigation**: [⬅️ Previous: 05: Binary Search](05-binary-search.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 07: Heaps & Priority Queues](07-heaps-and-priority-queues.md)
+
+---
+
 Trees model hierarchical relationships. Interviewers test recursive mental models, Depth-First Search (DFS) variants, Breadth-First Search (BFS) level-order queues, and Trie prefix graphs.
 
 ---
@@ -428,3 +432,7 @@ public class Trie {
 > 📖 **Must-Read Resources**
 > - [LeetCode Trees Questions](https://leetcode.com/tag/tree/)
 > - [Python Docs: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 05: Binary Search](05-binary-search.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 07: Heaps & Priority Queues](07-heaps-and-priority-queues.md)

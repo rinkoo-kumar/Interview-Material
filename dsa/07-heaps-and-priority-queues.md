@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 7: Heaps, Priority Queues & The Two-Heaps Pattern
 
+> 🧭 **Navigation**: [⬅️ Previous: 06: Trees & Tries](06-trees-and-tries.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 08: Graphs & Union-Find](08-graphs-and-union-find.md)
+
+---
+
 A **Priority Queue** provides $O(1)$ access to the minimum (or maximum) element while allowing $O(\log N)$ insertions and deletions. Under the hood, it is implemented as a **Binary Heap**.
 
 ---
@@ -290,3 +294,7 @@ public class MergeKSortedLists {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 06: Trees & Tries](06-trees-and-tries.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 08: Graphs & Union-Find](08-graphs-and-union-find.md)

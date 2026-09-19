@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 3: Procure-to-Pay (P2P) & Vendor Supply Management
 
+> 🧭 **Navigation**: [⬅️ Previous: 02: Order-to-Cash & CRM](02-order-to-cash-and-crm.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 04: Inventory & Costing](04-inventory-warehouse-and-costing.md)
+
+---
+
 The **Procure-to-Pay (P2P)** lifecycle governs how an enterprise spends capital, manages vendor relationships, enforces procurement internal controls, and accounts for inbound logistics.
 
 ---
@@ -187,3 +191,7 @@ flowchart TD
 > 📖 **Must-Read Resources**
 > - APICS Dictionary: https://www.ascm.org
 > - Deloitte IFRS insights - Inventory Valuation: https://www.iasplus.com
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 02: Order-to-Cash & CRM](02-order-to-cash-and-crm.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 04: Inventory & Costing](04-inventory-warehouse-and-costing.md)

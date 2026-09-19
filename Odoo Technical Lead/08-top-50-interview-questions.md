@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 8: Top 50+ Senior & Lead Odoo Interview Questions & Ideal Answers
 
+> 🧭 **Navigation**: [⬅️ Previous: 07: Technical Leadership](07-technical-leadership.md) | [🏠 Odoo Technical Lead Track Index](README.md) | End of Track ⇥
+
+---
+
 Here is a curated collection of deep, scenario-based interview questions asked in Senior Odoo Developer and Technical Lead interviews.
 
 ---
@@ -185,3 +189,7 @@ Here is a curated collection of deep, scenario-based interview questions asked i
 
 #### Q50: Why are XML IDs (`ir.model.data`) critical for enterprise modules?
 - **Answer**: XML IDs provide stable, unique string identifiers (e.g. `base.main_company`) that decouple code and migrations from auto-incrementing database integer IDs. Hardcoding integer IDs (`id == 1`) creates catastrophic bugs across staging and production instances where IDs differ.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 07: Technical Leadership](07-technical-leadership.md) | [🏠 Odoo Technical Lead Track Index](README.md) | End of Track ⇥

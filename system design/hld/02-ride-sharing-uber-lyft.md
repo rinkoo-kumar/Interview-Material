@@ -1,6 +1,10 @@
 # Track 3: System Design — High-Level Design (HLD)
 ## Chapter 2: HLD Case Study: Real-Time Ride-Sharing Service (Uber / Lyft)
 
+> 🧭 **Navigation**: [⬅️ Previous: HLD 01: Framework & Components](01-hld-framework-and-components.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 03: Amazon Marketplace](03-ecommerce-marketplace-amazon.md)
+
+---
+
 Designing a ride-sharing service evaluates geospatial data modeling, handling massive ingestion streams (1M+ concurrent GPS broadcasts), real-time matching algorithms, and dynamic surge pricing.
 
 ---
@@ -159,3 +163,7 @@ public class RideMatcher {
 
 > 📖 **Must-Read Resources**
 > - Uber Engineering: Matching Algorithms - https://www.uber.com/en-US/blog/engineering/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: HLD 01: Framework & Components](01-hld-framework-and-components.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 03: Amazon Marketplace](03-ecommerce-marketplace-amazon.md)

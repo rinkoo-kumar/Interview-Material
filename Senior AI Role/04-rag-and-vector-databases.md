@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 4: Production RAG, Vector Search & Hybrid Information Retrieval
 
+> 🧭 **Navigation**: [⬅️ Previous: 03: Prompting & Structured I/O](03-prompting-and-structured-io.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 05: Fine-Tuning & PEFT](05-fine-tuning-and-peft.md)
+
+---
+
 Retrieval-Augmented Generation (RAG) is the enterprise standard for grounding LLM responses in proprietary data without costly retraining. In senior interviews, you must be able to design high-precision, low-latency retrieval pipelines that solve real-world enterprise edge cases, rather than just plugging LangChain into Pinecone.
 
 ---
@@ -257,3 +261,7 @@ assert len(results) == 1, "Pipeline should return top_k results"
 > - PostgreSQL pgvector Docs: https://github.com/pgvector/pgvector
 > - RAGAS Evaluation Framework: https://docs.ragas.io/
 > - LangChain Docs - Parent Document Retriever: https://python.langchain.com/docs/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 03: Prompting & Structured I/O](03-prompting-and-structured-io.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 05: Fine-Tuning & PEFT](05-fine-tuning-and-peft.md)

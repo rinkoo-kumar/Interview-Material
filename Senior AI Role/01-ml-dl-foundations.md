@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 1: Machine Learning Foundations, Forecasting & Efficient Inference
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 02: Transformer & LLM Core](02-transformer-and-llm-core.md)
+
+---
+
 Before specializing in Large Language Models and Generative AI, a Senior AI Engineer must have an unshakeable grasp of classical machine learning, statistical evaluation, demand forecasting, and production runtime optimization.
 
 ---
@@ -307,3 +311,7 @@ public class ONNXInference {
 > 📖 **Must-Read Resources**
 > - ONNX Runtime Documentation: https://onnxruntime.ai/docs/
 > - AWS Architecture Blog (Edge ML): https://aws.amazon.com/blogs/architecture/
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 02: Transformer & LLM Core](02-transformer-and-llm-core.md)

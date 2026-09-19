@@ -1,6 +1,10 @@
 # 500 Master Questions Bank: Volume 1
 ## 150 DSA Interview Questions & Complete Answers (Python 3 & Java 17)
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 2: 100 System Design Questions](02-system-design-100-questions.md)
+
+---
+
 ### Section 1: Arrays, Hashing & Prefix Sum (Q1–Q20)
 
 #### Q1: Array vs dynamic array memory mechanics
@@ -964,3 +968,7 @@ def maxEnvelopes(envelopes):
             dp[idx] = h
     return len(dp)
 ```
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 2: 100 System Design Questions](02-system-design-100-questions.md)

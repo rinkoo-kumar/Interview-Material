@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 5: Parameter-Efficient Fine-Tuning (PEFT), LoRA & Model Alignment
 
+> 🧭 **Navigation**: [⬅️ Previous: 04: RAG & Vector Databases](04-rag-and-vector-databases.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 06: AI Agents & MCP](06-ai-agents-and-mcp.md)
+
+---
+
 When off-the-shelf foundation models cannot adhere to strict enterprise output syntax, fail to adopt specialized domain terminology, or require massive prompt engineering overhead, model adaptation becomes strictly necessary. A Senior AI Engineer must understand when to apply RAG versus fine-tuning, how Low-Rank Adaptation (LoRA) operates mathematically, and how modern alignment algorithms (DPO vs RLHF) function at scale.
 
 ---
@@ -203,3 +207,7 @@ Fine-tuning often causes "Catastrophic Forgetting" — the model gets better at 
 > - QLoRA Original Paper (Dettmers et al.): https://arxiv.org/abs/2305.14314
 > - DPO Paper (Rafailov et al.): https://arxiv.org/abs/2305.18290
 > - HuggingFace PEFT Docs: https://huggingface.co/docs/peft/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 04: RAG & Vector Databases](04-rag-and-vector-databases.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 06: AI Agents & MCP](06-ai-agents-and-mcp.md)

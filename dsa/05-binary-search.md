@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 5: Binary Search & Search on Solution Space
 
+> 🧭 **Navigation**: [⬅️ Previous: 04: Stacks & Queues](04-stacks-and-queues.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 06: Trees & Tries](06-trees-and-tries.md)
+
+---
+
 Binary Search is more than looking up numbers in a sorted array; it is a general algorithmic paradigm for searching any **Monotonic Search Space** in $O(\log N)$ time.
 
 ---
@@ -207,3 +211,7 @@ public class KokoEatingBananas {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 04: Stacks & Queues](04-stacks-and-queues.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 06: Trees & Tries](06-trees-and-tries.md)

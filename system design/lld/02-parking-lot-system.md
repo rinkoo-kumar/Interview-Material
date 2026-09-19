@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 2: Complete LLD: Object-Oriented Parking Lot System
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 01: Principles & Design Patterns](01-lld-principles-and-design-patterns.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 03: Elevator System](03-elevator-system.md)
+
+---
+
 The Parking Lot problem is the quintessential Low-Level Design interview question. It tests object-oriented modeling, polymorphism, state encapsulation, pricing strategy patterns, and thread safety.
 
 ---
@@ -284,3 +288,7 @@ class HourlyPricingStrategy implements PricingStrategy {
 > - Refactoring.guru Design Patterns: https://refactoring.guru/design-patterns
 > - The System Design Primer: https://github.com/donnemartin/system-design-primer
 > - LeetCode Design Problems: https://leetcode.com/tag/design/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 01: Principles & Design Patterns](01-lld-principles-and-design-patterns.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 03: Elevator System](03-elevator-system.md)

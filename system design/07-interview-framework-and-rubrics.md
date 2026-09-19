@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 7: The 45-Minute Interview Execution Framework & Cheat Sheets
 
+> 🧭 **Navigation**: [⬅️ Previous: 06: AI & Data System Design](06-ai-system-design.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: HLD 01: Framework & Components](hld/01-hld-framework-and-components.md)
+
+---
+
 Succeeding in a system design interview is as much about communication structure and driving the discussion as it is about technical knowledge. Interviewers evaluate whether you can lead an ambiguous technical initiative from vague requirements to an architected, resilient production system.
 
 ---
@@ -150,3 +154,7 @@ graph TD
 
 > 💡 **Interview Tip**
 > Seniority is not just knowing more technologies; it's understanding the exact limits of those technologies. A junior engineer says "Kafka is fast". A senior engineer says "Kafka can achieve 1M TPS via sequential I/O and zero-copy, but it introduces operational overhead via ZooKeeper/KRaft and requires careful partition key design to maintain ordering."
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 06: AI & Data System Design](06-ai-system-design.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: HLD 01: Framework & Components](hld/01-hld-framework-and-components.md)

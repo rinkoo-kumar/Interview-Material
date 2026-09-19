@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 2: Order-to-Cash (O2C) & Enterprise CRM Mastery
 
+> 🧭 **Navigation**: [⬅️ Previous: 01: Role & ERP Methodology](01-role-and-methodology.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 03: Procure-to-Pay & Vendor](03-procure-to-pay-and-vendor.md)
+
+---
+
 The **Order-to-Cash (O2C)** process is the financial lifeblood of any commercial organization. A Techno-Functional Lead must design an uninterrupted chain from initial marketing inquiry to final cash receipt and revenue recognition.
 
 ---
@@ -188,3 +192,7 @@ Under international accounting standards, revenue cannot be recognized simply be
 > - FASB ASC 606: https://www.fasb.org
 > - Deloitte IFRS insights: https://www.iasplus.com
 > - PWC Revenue recognition guide: https://viewpoint.pwc.com/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 01: Role & ERP Methodology](01-role-and-methodology.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 03: Procure-to-Pay & Vendor](03-procure-to-pay-and-vendor.md)

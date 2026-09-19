@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 7: Technical Leadership, Architecture Decisions & Team Excellence
 
+> 🧭 **Navigation**: [⬅️ Previous: 06: Migrations & DevOps](06-migrations-and-devops.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 08: Top 50+ Odoo Lead Q&A](08-top-50-interview-questions.md)
+
+---
+
 ### 1. Code Review Checklist for Odoo PRs
 A robust 10-point mandatory checklist for Odoo development teams:
 1. ✅ No `cr.commit()` or `cr.rollback()` in business logic.
@@ -91,3 +95,7 @@ graph TD
 
 > 📖 **Blog:** https://sre.google/sre-book/postmortem-culture/
 > 💡 **Interview Tip:** Bring a real incident story — interviewers love post-mortems and learning how you handle pressure and failure.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 06: Migrations & DevOps](06-migrations-and-devops.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 08: Top 50+ Odoo Lead Q&A](08-top-50-interview-questions.md)

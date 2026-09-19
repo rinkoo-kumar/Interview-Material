@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 3: Prompt Engineering, Structured Outputs & Constrained Decoding
 
+> 🧭 **Navigation**: [⬅️ Previous: 02: Transformer & LLM Core](02-transformer-and-llm-core.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 04: RAG & Vector Databases](04-rag-and-vector-databases.md)
+
+---
+
 In production systems, Large Language Models cannot simply emit free-form text. They must reliably parse enterprise data, adhere to strict JSON schemas, handle edge cases, and trigger downstream software deterministically without susceptibility to prompt injection attacks. A Senior AI Engineer is expected to orchestrate all these moving parts securely at scale.
 
 ---
@@ -258,3 +262,7 @@ In large enterprises, prompts are treated as software code.
 > - Instructor Library Docs: https://jxnl.github.io/instructor/
 > - Outlines Documentation: https://outlines-dev.github.io/outlines/
 > - Anthropic Constitutional AI: https://www.anthropic.com/research/constitutional-ai
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 02: Transformer & LLM Core](02-transformer-and-llm-core.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: 04: RAG & Vector Databases](04-rag-and-vector-databases.md)

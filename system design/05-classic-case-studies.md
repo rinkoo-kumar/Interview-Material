@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 5: Classic System Design Case Studies
 
+> 🧭 **Navigation**: [⬅️ Previous: 04: Distributed Patterns](04-distributed-patterns.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 06: AI & Data System Design](06-ai-system-design.md)
+
+---
+
 This chapter walks through four classic, highly tested system design interview scenarios, illustrating how to apply distributed systems principles end-to-end.
 
 ---
@@ -263,3 +267,7 @@ graph TD
 > 📖 **Must-Read Resources**
 > - Netflix Tech Blog: Netflix Conductor - https://netflixtechblog.com
 > - Stripe Blog: Designing Robust Webhooks - https://stripe.com/blog/webhooks
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 04: Distributed Patterns](04-distributed-patterns.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 06: AI & Data System Design](06-ai-system-design.md)

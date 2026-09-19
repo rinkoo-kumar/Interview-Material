@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 2: Networking Protocols, Load Balancers & Reverse Proxies
 
+> 🧭 **Navigation**: [⬅️ Previous: 01: System Design Fundamentals](01-system-design-fundamentals.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 03: Databases & Caching](03-databases-and-caching.md)
+
+---
+
 System architects must master how bytes travel across wires. In system design interviews, explaining how protocols negotiate connections, handle head-of-line blocking, and balance traffic is essential for designing resilient gateways.
 
 ---
@@ -228,3 +232,7 @@ graph LR
 > 📖 **Must-Read Resources**
 > - Netflix Tech Blog: Announcing Zuul - https://netflixtechblog.com
 > - Uber Engineering: Edge Gateway - https://www.uber.com/en-US/blog/engineering/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 01: System Design Fundamentals](01-system-design-fundamentals.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 03: Databases & Caching](03-databases-and-caching.md)

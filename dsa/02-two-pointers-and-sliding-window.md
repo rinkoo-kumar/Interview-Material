@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 2: Two Pointers & The Sliding Window Pattern
 
+> 🧭 **Navigation**: [⬅️ Previous: 01: Arrays & Hashing](01-arrays-and-hashing.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 03: Linked Lists](03-linked-lists.md)
+
+---
+
 The **Two Pointers** and **Sliding Window** patterns convert naive $O(N^2)$ brute-force nested loops into optimal $O(N)$ linear time algorithms by exploiting sorted properties or continuous contiguous subsegments.
 
 ---
@@ -269,3 +273,7 @@ public class LongestSubstringWithoutRepeating {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 01: Arrays & Hashing](01-arrays-and-hashing.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 03: Linked Lists](03-linked-lists.md)

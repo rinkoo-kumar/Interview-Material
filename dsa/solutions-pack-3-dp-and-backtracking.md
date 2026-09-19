@@ -1,6 +1,10 @@
 # DSA Track: Practical Code Solutions Pack 3
 ## Dynamic Programming & Backtracking (Python & Java)
 
+> 🧭 **Navigation**: [⬅️ Previous: Solutions Pack 2: Trees & Graphs](solutions-pack-2-trees-graphs-heaps.md) | [🏠 DSA Track Index](README.md) | End of Track ⇥
+
+---
+
 This pack provides complete, runnable, production-grade implementations for the most tricky Dynamic Programming and Backtracking interview questions asked at Google, Meta, Apple, and Netflix.
 
 ---
@@ -249,3 +253,7 @@ public class RegularExpressionMatching {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Solutions Pack 2: Trees & Graphs](solutions-pack-2-trees-graphs-heaps.md) | [🏠 DSA Track Index](README.md) | End of Track ⇥

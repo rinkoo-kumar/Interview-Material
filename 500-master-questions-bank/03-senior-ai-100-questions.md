@@ -1,6 +1,10 @@
 # 500 Master Questions Bank: Volume 3
 ## 100 Senior AI & Generative AI Systems Interview Questions & Complete Answers
 
+> 🧭 **Navigation**: [⬅️ Previous: Volume 2: 100 System Design Questions](02-system-design-100-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 4: 75 Techno-Functional Questions](04-techno-functional-75-questions.md)
+
+---
+
 ### Section 1: ML/DL Foundations & Classical ML (Q1–Q20)
 
 #### QN: Q1: Bias-Variance decomposition mathematical formula and intuition
@@ -731,3 +735,7 @@ Hardcoding prompts in Python files is an anti-pattern.
 - **Agents replacing Pipelines:** Brittle, hardcoded MLOps data pipelines are being replaced by autonomous agents that write their own scraping scripts, fix their own schema errors, and dynamically route data.
 - **Reasoning Models (e.g., OpenAI o1):** Moving compute from *training-time* to *inference-time*. Instead of training massive static models, o1-style models use latent reinforcement learning and massive CoT to think for 10-60 seconds before answering.
 - **Test-Time Compute:** The paradigm shift where spending more GPU compute *during generation* (via search algorithms, self-correction, and ensembling) yields exponential performance gains on complex math/logic, surpassing the limits of pure scaling laws alone.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Volume 2: 100 System Design Questions](02-system-design-100-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 4: 75 Techno-Functional Questions](04-techno-functional-75-questions.md)

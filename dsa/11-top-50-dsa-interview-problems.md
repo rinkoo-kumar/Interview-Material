@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 11: Top 50 DSA Interview Problems & The 14 Algorithmic Patterns
 
+> 🧭 **Navigation**: [⬅️ Previous: 10: Backtracking & Greedy](10-backtracking-and-greedy.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 1: Arrays & Strings](solutions-pack-1-arrays-strings-sliding-window.md)
+
+---
+
 This master reference catalogs the **Top 50 must-solve algorithmic problems** grouped by the **14 Core Algorithmic Patterns**. Memorizing individual problems fails; recognizing the underlying pattern succeeds.
 
 ---
@@ -130,3 +134,7 @@ graph TD
 | **48**| [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | DP + Binary Search | Medium | $O(N \log N)$ | $O(N)$ | Patience sorting / `bisect_left` tails array |
 | **49**| [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 2D DP | Medium | $O(M \cdot N)$ | $O(M \cdot N)$ | Diagonal if match; max(left, top) if mismatch |
 | **50**| [Edit Distance](https://leetcode.com/problems/edit-distance/) | 2D DP | Hard | $O(M \cdot N)$ | $O(M \cdot N)$ | $1 + \min(\text{insert}, \text{delete}, \text{replace})$ |
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 10: Backtracking & Greedy](10-backtracking-and-greedy.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 1: Arrays & Strings](solutions-pack-1-arrays-strings-sliding-window.md)

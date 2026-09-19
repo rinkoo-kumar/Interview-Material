@@ -1,6 +1,10 @@
 # Track 3: System Design — High-Level Design (HLD)
 ## Chapter 3: HLD Case Study: Scalable E-Commerce Marketplace (Amazon / Flipkart)
 
+> 🧭 **Navigation**: [⬅️ Previous: HLD 02: Uber / Lyft](02-ride-sharing-uber-lyft.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 04: Notification System](04-scalable-notification-system.md)
+
+---
+
 Designing an enterprise e-commerce platform evaluates domain separation, search scalability, cart persistence across sessions, and resilient distributed order checkouts using the Saga Pattern.
 
 ---
@@ -179,3 +183,7 @@ public class PaymentService {
 > 📖 **Must-Read Resources**
 > - Stripe Engineering: Idempotency Keys - https://stripe.com/blog/idempotency
 > - Microservices.io: Saga Pattern - https://microservices.io/patterns/data/saga.html
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: HLD 02: Uber / Lyft](02-ride-sharing-uber-lyft.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 04: Notification System](04-scalable-notification-system.md)

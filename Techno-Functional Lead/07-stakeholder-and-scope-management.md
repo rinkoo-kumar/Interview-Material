@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 7: Stakeholder Management, Scope Governance & Change Leadership
 
+> 🧭 **Navigation**: [⬅️ Previous: 06: Manufacturing MRP & SCM](06-manufacturing-mrp-and-scm.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 08: Top 50+ Business Scenarios Q&A](08-top-50-techno-functional-questions.md)
+
+---
+
 Industry data reveals that over **70% of ERP transformations fail to achieve their projected ROI**—not due to software compilation bugs, but due to **uncontrolled scope creep, political misalignment, and human resistance to change**. A Techno-Functional Lead protects project scope, aligns executive leadership, and guides user adoption.
 
 ---
@@ -135,3 +139,7 @@ One week before scheduled Go-Live, the Techno-Functional Lead convenes the Go/No
 
 > 📖 **Must-Read Resources**
 > - Meta Engineering - Zero Downtime Migrations: https://engineering.fb.com
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 06: Manufacturing MRP & SCM](06-manufacturing-mrp-and-scm.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 08: Top 50+ Business Scenarios Q&A](08-top-50-techno-functional-questions.md)

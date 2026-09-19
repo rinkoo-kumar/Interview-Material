@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 4: Complete LLD: Thread-Safe LRU Cache with TTL & Token Bucket Rate Limiter
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 03: Elevator System](03-elevator-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 05: Splitwise Expense Sharing](05-splitwise-expense-sharing.md)
+
+---
+
 Data structures under high concurrency are frequently tested in Staff & Senior LLD interviews. Here are production-grade implementations of an **LRU Cache with TTL** and a **Token Bucket Rate Limiter**.
 
 ---
@@ -286,3 +290,7 @@ class TokenBucket {
 > 📖 **Must-Read Resources**
 > - Stripe Engineering: Rate Limiters (https://stripe.com/blog/rate-limiters)
 > - Redis Documentation: LRU Cache (https://redis.io/topics/lru-cache)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 03: Elevator System](03-elevator-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 05: Splitwise Expense Sharing](05-splitwise-expense-sharing.md)

@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 5: Complete LLD: Splitwise Expense Sharing System
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 04: LRU Cache & Rate Limiter](04-lru-cache-and-rate-limiter.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 06: BookMyShow Booking](06-movie-ticket-booking-bookmyshow.md)
+
+---
+
 The Splitwise Low-Level Design problem is one of the most frequently asked machine-coding questions at Tier-1 product-based companies (Uber, Swiggy, Cred, PhonePe, Amazon, Flipkart).
 
 It tests object-oriented modeling, the Strategy Pattern for expense calculations, and graph algorithms for debt simplification.
@@ -344,3 +348,7 @@ public class SplitwiseDemo {
 > 📖 **Must-Read Resources**
 > - Splitwise Engineering Blog: Debt Simplification (https://blog.splitwise.com)
 > - GeeksForGeeks: Minimize Cash Flow among friends (https://www.geeksforgeeks.org/minimize-cash-flow-among-given-set-friends-borrowed-money/)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 04: LRU Cache & Rate Limiter](04-lru-cache-and-rate-limiter.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 06: BookMyShow Booking](06-movie-ticket-booking-bookmyshow.md)

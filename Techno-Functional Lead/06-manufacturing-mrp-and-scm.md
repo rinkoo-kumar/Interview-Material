@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 6: Manufacturing (MRP), Routing & Supply Chain Planning
 
+> 🧭 **Navigation**: [⬅️ Previous: 05: Accounting & Financial Ledgers](05-accounting-and-financial-ledgers.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 07: Stakeholder & Scope Management](07-stakeholder-and-scope-management.md)
+
+---
+
 Modern industrial organizations rely on **Material Requirements Planning (MRP)** to balance customer demand against machine capacities, material lead times, and labor availability. A Techno-Functional Lead must architect Bill of Materials (BOM) explosions, work center scheduling, and subcontracting flows.
 
 ---
@@ -169,3 +173,7 @@ def calculate_mrp_dates(promised_date: date, shipping_lead: int, mfg_lead: int, 
 
 > 📖 **Must-Read Resources**
 > - Odoo Manufacturing Docs (Subcontracting): https://www.odoo.com/documentation/17.0/applications/inventory_and_mrp/manufacturing/management/subcontracting.html
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 05: Accounting & Financial Ledgers](05-accounting-and-financial-ledgers.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 07: Stakeholder & Scope Management](07-stakeholder-and-scope-management.md)

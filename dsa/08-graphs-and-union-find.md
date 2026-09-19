@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 8: Graphs, Topological Sort, Dijkstra & Disjoint Set Union (DSU)
 
+> 🧭 **Navigation**: [⬅️ Previous: 07: Heaps & Priority Queues](07-heaps-and-priority-queues.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 09: Dynamic Programming](09-dynamic-programming.md)
+
+---
+
 Graph theory is central to modeling distributed networks, dependency build systems, social graphs, and routing networks.
 
 ---
@@ -369,3 +373,7 @@ public class RedundantConnection {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 07: Heaps & Priority Queues](07-heaps-and-priority-queues.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: 09: Dynamic Programming](09-dynamic-programming.md)

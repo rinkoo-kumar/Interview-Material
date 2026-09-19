@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 8: Top 50+ Techno-Functional Lead Interview Questions & Ideal Answers
 
+> 🧭 **Navigation**: [⬅️ Previous: 07: Stakeholder & Scope Management](07-stakeholder-and-scope-management.md) | [🏠 Techno-Functional Track Index](README.md) | End of Track ⇥
+
+---
+
 Here is a curated collection of deep, scenario-based interview questions asked in Techno-Functional Lead, ERP Solution Architect, and Principal Consultant interviews.
 
 ---
@@ -258,3 +262,7 @@ Here is a curated collection of deep, scenario-based interview questions asked i
   3. Conduct daily morning standups with department leads to review open ticket counts and operational blockers.
   4. Run daily reconciliation checks on inventory moves and financial ledgers during the first 14 days.
   5. Formal handover to standard Business-As-Usual (BAU) support only after ticket volume stabilizes at low baseline levels for two consecutive weeks.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 07: Stakeholder & Scope Management](07-stakeholder-and-scope-management.md) | [🏠 Techno-Functional Track Index](README.md) | End of Track ⇥

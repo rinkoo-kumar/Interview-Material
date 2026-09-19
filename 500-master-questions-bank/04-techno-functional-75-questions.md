@@ -1,6 +1,10 @@
 # 500 Master Questions Bank: Volume 4
 ## 75 Techno-Functional Lead & ERP Solution Architect Interview Questions
 
+> 🧭 **Navigation**: [⬅️ Previous: Volume 3: 100 Senior AI Questions](03-senior-ai-100-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 5: 75 Odoo Lead Questions](05-odoo-technical-lead-75-questions.md)
+
+---
+
 This volume contains **75 deep scenario-based questions and answers** tailored for Techno-Functional Leads, Principal ERP Consultants, and Solution Architects. It bridges boardroom business requirements, accounting integrity, supply chain operations, and technical software execution.
 
 ---
@@ -549,3 +553,7 @@ This volume contains **75 deep scenario-based questions and answers** tailored f
   - **RPO (Recovery Point Objective)**: Maximum acceptable data loss duration (target: $\le 1$ minute). Enforced via PostgreSQL synchronous streaming replication to a standby regional node with continuous WAL archiving to Amazon S3.
   - **RTO (Recovery Time Objective)**: Maximum acceptable system downtime (target: $\le 15$ minutes). Enforced via automated DNS failover (Route 53) pointing to the standby hot node with pre-warmed application containers.
   - **Quarterly DR Drill**: Mandatory unannounced simulated failover testing during non-peak windows to validate backup integrity and executive communication chains.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Volume 3: 100 Senior AI Questions](03-senior-ai-100-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 5: 75 Odoo Lead Questions](05-odoo-technical-lead-75-questions.md)

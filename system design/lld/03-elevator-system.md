@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 3: Complete LLD: Multi-Elevator System & Dispatch Algorithms
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 02: Parking Lot System](02-parking-lot-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 04: LRU Cache & Rate Limiter](04-lru-cache-and-rate-limiter.md)
+
+---
+
 The Elevator System design tests state machine modeling, concurrency, priority queues, and scheduling algorithms (SCAN / LOOK algorithm).
 
 ---
@@ -264,3 +268,7 @@ class ElevatorController {
 > 📖 **Must-Read Resources**
 > - The System Design Primer: https://github.com/donnemartin/system-design-primer
 > - Refactoring.guru Design Patterns: https://refactoring.guru/design-patterns
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 02: Parking Lot System](02-parking-lot-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 04: LRU Cache & Rate Limiter](04-lru-cache-and-rate-limiter.md)

@@ -1,6 +1,10 @@
 # Track 3: System Design — High-Level Design (HLD)
 ## Chapter 4: HLD Case Study: Scalable Multi-Channel Notification Service
 
+> 🧭 **Navigation**: [⬅️ Previous: HLD 03: Amazon Marketplace](03-ecommerce-marketplace-amazon.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 05: Twitter News Feed](05-twitter-news-feed-system.md)
+
+---
+
 A centralized notification system sends billions of notifications daily across **Push (APNs/FCM)**, **SMS**, **Email**, and **In-App** channels while enforcing priority queues, deduplication, user preferences, and carrier rate limits.
 
 ---
@@ -89,3 +93,7 @@ graph TD
 > - Medium (Airbnb Engineering): Notification at Airbnb (https://medium.com/airbnb-engineering)
 > - Uber Engineering: Designing an Extensible and Scalable Notification System (https://www.uber.com/en-US/blog/engineering/)
 > - Firebase Documentation (https://firebase.google.com/docs/cloud-messaging)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: HLD 03: Amazon Marketplace](03-ecommerce-marketplace-amazon.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: HLD 05: Twitter News Feed](05-twitter-news-feed-system.md)

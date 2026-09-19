@@ -1,6 +1,10 @@
 # 500 Master Questions Bank: Volume 2
 ## 100 System Design (HLD & LLD) Interview Questions & Complete Answers
 
+> 🧭 **Navigation**: [⬅️ Previous: Volume 1: 150 DSA Questions](01-dsa-150-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 3: 100 Senior AI Questions](03-senior-ai-100-questions.md)
+
+---
+
 ### Section 1: Distributed Systems Foundations (Q1–Q35)
 
 #### QN 1: CAP theorem — why CA is mathematically impossible
@@ -891,3 +895,7 @@ class Graph:
 
 ---
 *End of Volume 2.*
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Volume 1: 150 DSA Questions](01-dsa-150-questions.md) | [🏠 500 Master Questions Bank Index](README.md) | [➡️ Next: Volume 3: 100 Senior AI Questions](03-senior-ai-100-questions.md)

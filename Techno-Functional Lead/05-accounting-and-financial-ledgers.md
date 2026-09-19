@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 5: Accounting, General Ledgers & Financial Governance
 
+> 🧭 **Navigation**: [⬅️ Previous: 04: Inventory & Costing](04-inventory-warehouse-and-costing.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 06: Manufacturing MRP & SCM](06-manufacturing-mrp-and-scm.md)
+
+---
+
 A Techno-Functional Lead must speak with authority to Chief Financial Officers, Controllers, and Head of Tax. Understanding the underlying mechanics of double-entry bookkeeping, Chart of Accounts (COA), foreign exchange revaluations, and fiscal closing procedures is mandatory.
 
 ---
@@ -197,3 +201,7 @@ At fiscal year-end:
 
 > 📖 **Must-Read Resources**
 > - PWC Accounting Guides: https://viewpoint.pwc.com/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 04: Inventory & Costing](04-inventory-warehouse-and-costing.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 06: Manufacturing MRP & SCM](06-manufacturing-mrp-and-scm.md)

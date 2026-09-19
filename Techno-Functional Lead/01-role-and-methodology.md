@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 1: The Techno-Functional Role, Fit-Gap Analysis & ERP Implementation Methodology
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 02: Order-to-Cash & CRM](02-order-to-cash-and-crm.md)
+
+---
+
 A **Techno-Functional Lead** is the essential bridge between the executive boardroom and the engineering trenches. You must speak the language of Chief Financial Officers, Operations Directors, and Supply Chain Managers, while translating business processes into precise data architectures, workflows, and developer specifications.
 
 ---
@@ -216,3 +220,7 @@ public class SalesOrderService {
 > 📖 **Must-Read Resources**
 > - Uber Engineering Blog - Domain Driven Design: https://www.uber.com/en-US/blog/engineering/
 > - Python Documentation: https://docs.python.org/3/
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 02: Order-to-Cash & CRM](02-order-to-cash-and-crm.md)

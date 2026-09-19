@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 2: Performance Optimization & PostgreSQL Mastery
 
+> 🧭 **Navigation**: [⬅️ Previous: 01: Architecture & Internals](01-architecture-and-internals.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 03: Security & Multi-Company](03-security-and-multi-company.md)
+
+---
+
 ### 1. Reading EXPLAIN ANALYZE Output
 Understanding PostgreSQL execution plans is vital for optimizing Odoo performance. The primary types of scans are Seq Scan (full table scan), Index Scan (uses index to find rows directly), Bitmap Index Scan (uses index to build a memory bitmap of row locations), and Hash Join (joins tables by hashing keys).
 
@@ -108,3 +112,7 @@ def _compute_total(self): ...
 > 📺 **Video:** Odoo Performance Optimization https://www.youtube.com/@Odoo
 > 📖 **Docs:** https://www.odoo.com/documentation/17.0/developer/reference/backend/performance.html
 > 💡 **Interview Tip:** Be ready to walk through a specific performance bug you fixed
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 01: Architecture & Internals](01-architecture-and-internals.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 03: Security & Multi-Company](03-security-and-multi-company.md)

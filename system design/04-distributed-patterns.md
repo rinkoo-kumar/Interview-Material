@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 4: Distributed Patterns, Event Streaming & Concurrency Control
 
+> 🧭 **Navigation**: [⬅️ Previous: 03: Databases & Caching](03-databases-and-caching.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 05: Classic Case Studies](05-classic-case-studies.md)
+
+---
+
 In microservices and decoupled architectures, systems fail independently. A Senior Systems Architect must know how to maintain data integrity across distributed boundaries, handle message ordering, prevent race conditions, and throttle abusive workloads.
 
 ---
@@ -337,3 +341,7 @@ public class RateLimiter {
 > 📖 **Must-Read Resources**
 > - Stripe Engineering: Rate Limiters - https://stripe.com/blog/rate-limiters
 > - Medium (Airbnb Eng): Scaling Caching and Rate Limiting - https://medium.com/airbnb-engineering
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 03: Databases & Caching](03-databases-and-caching.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 05: Classic Case Studies](05-classic-case-studies.md)

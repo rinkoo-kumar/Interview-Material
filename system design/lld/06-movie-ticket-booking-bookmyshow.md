@@ -1,6 +1,10 @@
 # Track 3: System Design — Low-Level Design (LLD)
 ## Chapter 6: Complete LLD: Movie Ticket Booking System (BookMyShow)
 
+> 🧭 **Navigation**: [⬅️ Previous: LLD 05: Splitwise Expense Sharing](05-splitwise-expense-sharing.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 07: In-Memory Key-Value Store](07-in-memory-key-value-store.md)
+
+---
+
 The Movie Ticket Booking System is a signature machine-coding problem at Amazon, Walmart, Flipkart, and Swiggy. It evaluates multi-entity domain modeling and **high-concurrency seat locking with time-to-live (TTL) expiration**.
 
 ---
@@ -270,3 +274,7 @@ public class BookMyShowDemo {
 > 📖 **Must-Read Resources**
 > - High Scalability: BookMyShow Architecture (http://highscalability.com)
 > - PostgreSQL Docs: Explicit Locking (https://www.postgresql.org/docs/current/explicit-locking.html)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: LLD 05: Splitwise Expense Sharing](05-splitwise-expense-sharing.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 07: In-Memory Key-Value Store](07-in-memory-key-value-store.md)

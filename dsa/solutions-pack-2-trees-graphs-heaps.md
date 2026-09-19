@@ -1,6 +1,10 @@
 # DSA Track: Practical Code Solutions Pack 2
 ## Trees, Graphs, BFS/DFS & Heaps (Python & Java)
 
+> 🧭 **Navigation**: [⬅️ Previous: Solutions Pack 1: Arrays & Strings](solutions-pack-1-arrays-strings-sliding-window.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 3: DP & Backtracking](solutions-pack-3-dp-and-backtracking.md)
+
+---
+
 This pack provides complete, runnable, production-grade implementations for the hardest Graph, Tree, and Heap problems asked at Google, Uber, Meta, and Amazon.
 
 ---
@@ -358,3 +362,7 @@ public class AlienDictionary {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: Solutions Pack 1: Arrays & Strings](solutions-pack-1-arrays-strings-sliding-window.md) | [🏠 DSA Track Index](README.md) | [➡️ Next: Solutions Pack 3: DP & Backtracking](solutions-pack-3-dp-and-backtracking.md)

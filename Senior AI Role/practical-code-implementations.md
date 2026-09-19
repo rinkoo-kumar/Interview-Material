@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Complete Practical Code Implementations
 
+> 🧭 **Navigation**: [⬅️ Previous: 08: Top 50+ AI Interview Q&A](08-top-50-ai-interview-questions.md) | [🏠 Senior AI Track Index](README.md) | End of Track ⇥
+
+---
+
 This document provides production-grade, fully runnable Python implementations for the three most critical AI engineering workflows tested in Senior & Staff AI interviews.
 
 ---
@@ -259,3 +263,7 @@ if __name__ == "__main__":
     # train_qlora()
     pass
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 08: Top 50+ AI Interview Q&A](08-top-50-ai-interview-questions.md) | [🏠 Senior AI Track Index](README.md) | End of Track ⇥

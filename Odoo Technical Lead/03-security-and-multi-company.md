@@ -1,6 +1,10 @@
 # Track 1: Odoo Technical Lead
 ## Chapter 3: Security Architecture & Multi-Company Design
 
+> 🧭 **Navigation**: [⬅️ Previous: 02: Performance & PostgreSQL](02-performance-and-database.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 04: OWL 2 & Frontend](04-owl-and-qweb-frontend.md)
+
+---
+
 ### 1. Access Control Layers
 Odoo enforces security across multiple levels:
 - **Layer 1: Menu items** (using the `ir.ui.menu` groups attribute).
@@ -107,3 +111,7 @@ response = requests.post('https://yourinstance.odoo.com/web/dataset/call_kw', js
     }
 }, headers={'Authorization': 'Bearer YOUR_API_KEY'})
 ```
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 02: Performance & PostgreSQL](02-performance-and-database.md) | [🏠 Odoo Technical Lead Track Index](README.md) | [➡️ Next: 04: OWL 2 & Frontend](04-owl-and-qweb-frontend.md)

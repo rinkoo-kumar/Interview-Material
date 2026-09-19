@@ -1,6 +1,10 @@
 # Track 2: Senior AI Role
 ## Chapter 8: Top 50+ Senior & Staff AI Engineer Interview Questions & Ideal Answers
 
+> 🧭 **Navigation**: [⬅️ Previous: 07: LLMOps, Evals & Guardrails](07-llmops-evals-and-guardrails.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: Practical Code Implementations](practical-code-implementations.md)
+
+---
+
 Here is a curated collection of deep, mathematical, and architecture-focused interview questions frequently asked in Senior AI Engineer and Staff GenAI interviews at tier-1 tech companies and enterprise AI platforms.
 
 ---
@@ -204,3 +208,7 @@ Here is a curated collection of deep, mathematical, and architecture-focused int
   - Separate data from system instructions using clear structural tags (`<user_email>...</user_email>`).
   - Pass retrieved untrusted data through an isolated sanitizer model or safety guardrail (e.g. Llama Guard) before passing it to the main reasoning agent.
   - Enforce least privilege on tool access: tools with destructive side-effects (e.g. `delete_database`, `wire_money`) must require explicit human confirmation.
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 07: LLMOps, Evals & Guardrails](07-llmops-evals-and-guardrails.md) | [🏠 Senior AI Track Index](README.md) | [➡️ Next: Practical Code Implementations](practical-code-implementations.md)

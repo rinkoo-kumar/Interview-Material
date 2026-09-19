@@ -1,6 +1,10 @@
 # DSA Track: Dual Python & Java
 ## Chapter 1: Arrays, Dynamic Sizing & Hash Table Internals
 
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 DSA Track Index](README.md) | [➡️ Next: 02: Two Pointers & Sliding Window](02-two-pointers-and-sliding-window.md)
+
+---
+
 Arrays and Hash Maps are the foundational data structures of software engineering. Interviewers use them to test memory locality awareness, amortized complexity analysis, and hash collision mechanics.
 
 ---
@@ -279,3 +283,7 @@ public class TopKFrequent {
     }
 }
 ```
+
+---
+
+> 🧭 **Navigation**: ⇤ First Chapter | [🏠 DSA Track Index](README.md) | [➡️ Next: 02: Two Pointers & Sliding Window](02-two-pointers-and-sliding-window.md)

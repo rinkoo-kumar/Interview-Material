@@ -1,6 +1,10 @@
 # Track 3: System Design — High-Level Design (HLD)
 ## Chapter 5: HLD Case Study: Scalable News Feed System (Twitter / X)
 
+> 🧭 **Navigation**: [⬅️ Previous: HLD 04: Notification System](04-scalable-notification-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 01: Principles & Design Patterns](../lld/01-lld-principles-and-design-patterns.md)
+
+---
+
 Designing a global real-time news feed system evaluates write vs read amplification, fanout architectures, Redis timeline caching, and handling the **"Celebrity Problem"**.
 
 ---
@@ -94,3 +98,7 @@ graph TD
 > - The System Design Primer: https://github.com/donnemartin/system-design-primer
 > - InfoQ: Twitter's Architecture (Timeline Fanout) (https://www.infoq.com)
 > - Meta Engineering Blog: News Feed Architecture (https://engineering.fb.com)
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: HLD 04: Notification System](04-scalable-notification-system.md) | [🏠 System Design Track Index](../README.md) | [➡️ Next: LLD 01: Principles & Design Patterns](../lld/01-lld-principles-and-design-patterns.md)

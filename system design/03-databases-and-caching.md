@@ -1,6 +1,10 @@
 # Track 3: System Design
 ## Chapter 3: Database Scaling, Consistent Hashing & Distributed Caching
 
+> 🧭 **Navigation**: [⬅️ Previous: 02: Networking, Proxies & Gateways](02-networking-and-proxies.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 04: Distributed Patterns](04-distributed-patterns.md)
+
+---
+
 At enterprise scale, the database and caching tier is where 80% of distributed systems fail under load. Interviewers will test your ability to partition data horizontally, eliminate single points of failure, and prevent catastrophic cache collapses.
 
 ---
@@ -323,3 +327,7 @@ Interviewers frequently ask: *"How can Redis achieve 100,000+ QPS while being si
 
 > 📖 **Must-Read Resources**
 > - Redis Docs: Persistence - https://redis.io/docs/management/persistence/
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 02: Networking, Proxies & Gateways](02-networking-and-proxies.md) | [🏠 System Design Track Index](README.md) | [➡️ Next: 04: Distributed Patterns](04-distributed-patterns.md)

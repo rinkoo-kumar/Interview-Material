@@ -1,6 +1,10 @@
 # Track 4: Techno-Functional Lead
 ## Chapter 4: Inventory, Warehouse Logistics & Inventory Valuation Costing
 
+> 🧭 **Navigation**: [⬅️ Previous: 03: Procure-to-Pay & Vendor](03-procure-to-pay-and-vendor.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 05: Accounting & Financial Ledgers](05-accounting-and-financial-ledgers.md)
+
+---
+
 Inventory is often the largest current asset on an enterprise balance sheet. A Techno-Functional Lead must configure multi-step warehouse logistics, automated replenishment, cross-docking, and GAAP/IFRS-compliant perpetual inventory costing.
 
 ---
@@ -180,3 +184,7 @@ flowchart TD
 
 > 📖 **Must-Read Resources**
 > - Odoo Inventory Valuation: https://www.odoo.com/documentation/17.0/applications/inventory_and_mrp/inventory.html
+
+---
+
+> 🧭 **Navigation**: [⬅️ Previous: 03: Procure-to-Pay & Vendor](03-procure-to-pay-and-vendor.md) | [🏠 Techno-Functional Track Index](README.md) | [➡️ Next: 05: Accounting & Financial Ledgers](05-accounting-and-financial-ledgers.md)
