@@ -33,3 +33,10 @@ ENV/
 *.swp
 *.swo
 *~
+
+# Handoff & Session Logs
+HANDOFF.md
+handoff.md
+*handoff*
+*HANDOFF*
+
