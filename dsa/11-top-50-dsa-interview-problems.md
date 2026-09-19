@@ -32,6 +32,37 @@ This master reference catalogs the **Top 50 must-solve algorithmic problems** gr
 | **13** | **K-way Merge** | Merging $K$ sorted lists, matrices, or data streams | Merge K Sorted Lists, Kth Smallest Element in Sorted Matrix | $O(N \log K)$ with Min-Heap |
 | **14** | **Dynamic Programming** | Overlapping subproblems, optimization (min/max/ways) | Coin Change, LIS, Longest Common Subsequence, Edit Distance | $O(N)$ to $O(N^2)$ |
 
+```mermaid
+graph TD
+    Start["New DSA Problem"] --> InputType{"What is the input structure?"}
+    
+    InputType -->|"Array / String"| ArrayCond{"Is array sorted?"}
+    ArrayCond -->|"Yes"| SortedChoice{"Looking for pair, target, or range?"}
+    SortedChoice -->|"Pair or boundary"| P1["Pattern 1: Two Pointers"]
+    SortedChoice -->|"Target index / search space"| P11["Pattern 11: Binary Search"]
+    
+    ArrayCond -->|"No"| ContigChoice{"Contiguous subarray or subsequence?"}
+    ContigChoice -->|"Contiguous subarray"| P2["Pattern 2: Sliding Window"]
+    ContigChoice -->|"Subsequence / Permutations"| P10["Pattern 10: Backtracking"]
+    ContigChoice -->|"Bounded range 1 to N"| P5["Pattern 5: Cyclic Sort"]
+    ContigChoice -->|"Optimal min/max/count"| P14["Pattern 14: Dynamic Programming"]
+    
+    InputType -->|"Linked List"| LLCond{"Cycle, middle, or reversal?"}
+    LLCond -->|"Cycle or midpoint"| P3["Pattern 3: Fast & Slow Pointers"]
+    LLCond -->|"Reversing subsegment"| P6["Pattern 6: In-place Reversal"]
+    
+    InputType -->|"Tree / Graph"| TreeCond{"Traversal or hierarchy?"}
+    TreeCond -->|"Level by level"| P7["Pattern 7: Tree BFS"]
+    TreeCond -->|"Root-to-leaf paths / ancestors"| P8["Pattern 8: Tree DFS"]
+    
+    InputType -->|"Stream / K elements"| StreamCond{"Top K or running median?"}
+    StreamCond -->|"Top K elements"| P12["Pattern 12: Top K Heap"]
+    StreamCond -->|"Running median"| P9["Pattern 9: Two Heaps"]
+    StreamCond -->|"Merge K lists"| P13["Pattern 13: K-Way Merge"]
+    
+    InputType -->|"Intervals"| P4["Pattern 4: Merge Intervals"]
+```
+
 > 💡 **Interview Tip**
 > If you are stuck on a problem, try running through this list of 14 patterns in your head. Ask yourself: "Is it a sliding window? Can I use a monotonic stack? What if I sort it and use two pointers?"
 

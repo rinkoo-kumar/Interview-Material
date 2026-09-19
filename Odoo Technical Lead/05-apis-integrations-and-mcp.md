@@ -91,6 +91,20 @@ class PaymentTransactionStripe(models.Model):
 
 - **War story:** Payment provider inheritance collision — two modules both inheriting `_stripe_make_request` caused one override to shadow the other; fixed with `super()` chain debugging.
 
+```mermaid
+graph TD
+    subgraph PaymentFlow["Idempotent Payment Provider Architecture"]
+        Customer["Customer Checkout"] --> OdooTx["Odoo: payment.transaction created<br/>(state='draft', reference='TX-94021')"]
+        OdooTx --> StripeCall["Stripe API: PaymentIntent.create()<br/>idempotency_key = reference ('TX-94021')"]
+        StripeCall --> NetworkCheck{"Network Timeout?"}
+        NetworkCheck -->|"Timeout Retry"| StripeRetry["Retry Request with SAME idempotency_key"]
+        StripeRetry --> StripeDedupe["Stripe Deduplicates: Zero Double Charge"]
+        NetworkCheck -->|"Success"| StripeProcess["Charge Processed"]
+        StripeProcess --> Webhook["Asynchronous Webhook (/payment/stripe/webhook)"]
+        Webhook --> TxConfirm["Odoo: payment.transaction set to 'done'<br/>sale.order automatically confirmed"]
+    end
+```
+
 ### 3. Model Context Protocol (MCP) for Odoo
 - **Architecture:** Claude/GPT (Host) → MCP Client → Odoo MCP Server
 - **Complete Python MCP server exposing Odoo data:**
@@ -131,6 +145,24 @@ if __name__ == '__main__':
 ```
 
 - **Real-world:** Claude Desktop + Odoo MCP server allows natural language ERP queries: 'Show me all overdue invoices from last month'.
+
+```mermaid
+graph LR
+    subgraph ClientHost["AI Host Application"]
+        Claude["Claude Desktop / Chat UI"] --> MCPClient["MCP Client Engine"]
+    end
+    
+    MCPClient -->|"stdio pipe / SSE HTTP"| MCPServer["Odoo MCP Server (Python)"]
+    
+    subgraph MCPServerInternals["MCP Server Internals"]
+        MCPServer --> ToolList["list_tools(): [search_sale_orders, get_invoice_kpis]"]
+        MCPServer --> ToolCall["call_tool(): Param Validation"]
+    end
+    
+    ToolCall -->|"JSON-RPC /web/dataset/call_kw"| OdooCore["Odoo WSGI Backend"]
+    OdooCore --> OdooORM["Odoo ORM (sale.order)"]
+    OdooORM --> Postgres[(PostgreSQL)]
+```
 
 > 📖 **Docs:** https://modelcontextprotocol.io
 > 💡 **Interview Tip:** MCP is the hottest topic in 2025 for AI+ERP integration.

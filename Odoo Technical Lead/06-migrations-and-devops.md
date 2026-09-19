@@ -15,6 +15,16 @@ def migrate(cr, version):
 - **Common issues:** Renamed models, merged fields, changed column types, resequenced modules.
 - **War story:** v14→v18 migration of an 80-module custom Odoo deployment — took 6 months, using a staged approach, with database rehearsal 5 times before go-live.
 
+```mermaid
+graph TD
+    subgraph MigrationStages["OpenUpgrade 3-Phase Migration Pipeline"]
+        Backup["0. Prod Database Dump & Sandbox Restore"] --> Pre["1. pre-migrate.py (Pure SQL)<br/>- Rename deprecated tables/columns<br/>- Drop obsolete foreign keys<br/>- Prevent ORM startup crashes"]
+        Pre --> ORM["2. Odoo Core Engine Update (-u module)<br/>- ORM parses new XML views<br/>- Auto-creates new columns & models<br/>- Executes schema alterations"]
+        ORM --> Post["3. post-migrate.py (ORM + SQL)<br/>- Migrate legacy field data to new models<br/>- Recompute functional/stored fields<br/>- Clean temporary staging tables"]
+        Post --> Validate["4. Automated Regression Tests & Sanity Check"]
+    end
+```
+
 > 📖 **Tool:** https://github.com/OCA/OpenUpgrade
 
 ### 2. Docker & Production Deployment
@@ -50,6 +60,26 @@ services:
 ```
 
 - **Odoo.sh:** Uses a standard branch-based deployment pattern: Development branches → Staging (testing with prod data copy) → Production promotion workflow.
+
+```mermaid
+graph TD
+    subgraph Edge["Public Network / CDN"]
+        Users["HTTPS Web / Mobile Users"] --> Nginx["Nginx Edge Proxy (SSL, Port 443)"]
+    end
+    
+    subgraph AppCluster["Odoo Application Cluster"]
+        Nginx -->|"Proxy Port 8069 (HTTP)"| OdooPrefork["Odoo Prefork Workers (WSGI Dynamic Content)"]
+        Nginx -->|"Proxy Port 8072 (WebSocket)"| OdooGevent["Odoo Gevent Worker (Longpolling / Livechat)"]
+        Nginx -->|"Direct Static Caching"| StaticAssets["Filestore Static CSS/JS Cache"]
+    end
+    
+    subgraph DataLayer["Database & Connection Layer"]
+        OdooPrefork --> PgBouncer["PgBouncer (Transaction Pooling)"]
+        PgBouncer --> PGPrimary[("PostgreSQL Primary (Port 5432)")]
+        PGPrimary -->|"Streaming Replication"| PGStandby[("PostgreSQL Read Standby")]
+        OdooPrefork --> NAS["Shared NFS / S3 Filestore (Attachments)"]
+    end
+```
 
 ### 3. CI/CD & Automated Testing
 

@@ -56,7 +56,6 @@ interview-material/
 │   └── 08-top-50-techno-functional-questions.md # 50+ Real-world business scenarios & answers
 │
 ├── Senior AI Role/                          # Track 3: Senior AI / Generative AI Engineer
-│   ├── ai-content.md                        # AI Track Master Roadmap & Topic Directory
 │   ├── practical-code-implementations.md    # Complete Runnable Python Code: Production RAG, Agent Loop, QLoRA
 │   ├── 01-ml-dl-foundations.md              # ML/DL foundations, regularization, Prophet/ARIMA forecasting
 │   ├── 02-transformer-and-llm-core.md       # Attention math, KV cache, vLLM, RoPE, quantization (AWQ/GGUF)
@@ -68,7 +67,6 @@ interview-material/
 │   └── 08-top-50-ai-interview-questions.md  # 50+ Hard-hitting Senior AI interview questions with solutions
 │
 ├── system design/                           # Track 4: Large-Scale Distributed System Design
-│   ├── raodmap.md                           # System Design Complete Roadmap & Blueprint
 │   ├── 01-system-design-fundamentals.md     # Scalability, CAP/PACELC, ACID vs BASE, consistency models
 │   ├── 02-networking-and-proxies.md         # L4/L7 load balancers, HTTP/2/3, WebSockets, gRPC, API gateways
 │   ├── 03-databases-and-caching.md          # Sharding, consistent hashing, replication, Redis caching patterns

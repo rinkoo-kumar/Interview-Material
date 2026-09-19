@@ -27,6 +27,21 @@ You cannot improve what you cannot measure. Human evaluation ("vibes") does not 
    - Computes Mean Average Precision (MAP). Checks whether the relevant chunks are ranked at position 1 and 2, rather than buried at position 9. 
    - Low precision means your re-ranker (Cross-Encoder) is failing.
 
+```mermaid
+graph TD
+    subgraph RAGTriad["The RAG Evaluation Triad (Ragas)"]
+        Query["User Query"] --> Context["Retrieved Context Chunks"]
+        Query --> GenAnswer["Generated LLM Answer"]
+        Context --> GenAnswer
+        
+        Context -.->|"Faithfulness: Are facts grounded in context?"| GenAnswer
+        Query -.->|"Answer Relevance: Does it answer the question?"| GenAnswer
+        Context -.->|"Context Precision: Are top chunks relevant?"| Query
+        
+        GroundTruth["Ground Truth (Gold Standard)"] -.->|"Context Recall: Were all facts retrieved?"| Context
+    end
+```
+
 ---
 
 ### 2. Tracing, Observability & Prompt Management
@@ -51,6 +66,30 @@ A production AI gateway must inspect traffic *before* it touches the LLM (Input 
 1. **PII Redaction (Presidio):** Microsoft Presidio scans the incoming prompt for SSNs, credit cards, and emails using Regex and NLP, masking them as `[REDACTED_EMAIL]` before sending the prompt to OpenAI.
 2. **Input Moderation (Llama Guard / NeMo Guardrails):** Nvidia's NeMo Guardrails and Meta's Llama Guard scan the prompt for jailbreak attempts, prompt injections, or off-topic questions (e.g., asking a banking bot to write poetry).
 3. **Output Moderation:** Scans the generated LLM text for toxicity, competitor mentions, or hallucinations before streaming it back to the client.
+
+```mermaid
+graph TD
+    ClientRequest["User Request"] --> APIGateway["Enterprise AI Gateway"]
+    
+    subgraph InputGuardrails["1. Pre-Execution Input Guardrails"]
+        APIGateway --> PII["Microsoft Presidio: PII Redaction"]
+        PII --> Jailbreak["NeMo / Llama Guard: Injection Detection"]
+        Jailbreak --> Router{"Model Router & Semantic Cache"}
+    end
+    
+    Router -->|"Cache Hit (>0.96 Cosine Sim)"| CachedResponse["Instant Cached Response (<10ms, $0)"]
+    CachedResponse --> ClientOutput["Safe Client Output"]
+    
+    Router -->|"Cache Miss (Complex Query)"| LLMInfer["Foundation Model Inference (GPT-4 / Claude)"]
+    
+    subgraph OutputGuardrails["2. Post-Execution Output Guardrails"]
+        LLMInfer --> Toxicity["Output Guard: Toxicity & Brand Safety"]
+        Toxicity --> FactCheck["Ragas Hallucination & Citation Check"]
+    end
+    
+    FactCheck -->|"Passed Validation"| UpdateCache["Update Redis Semantic Cache"]
+    UpdateCache --> ClientOutput
+```
 
 ---
 

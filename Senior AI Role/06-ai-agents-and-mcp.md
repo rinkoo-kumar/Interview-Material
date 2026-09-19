@@ -32,6 +32,20 @@ To execute an Action, the LLM must understand what tools exist. This is done by 
 }
 ```
 
+```mermaid
+graph TD
+    UserGoal["User Objective"] --> Thought["1. Thought: Reason about next sub-goal"]
+    Thought --> Decision{"Is goal met?"}
+    
+    Decision -->|"No: Action Needed"| ToolSelection["2. Action: Select Tool & Format JSON Arguments"]
+    ToolSelection --> Execution["3. Tool Execution: API / Database / Sandbox"]
+    Execution --> Observation["4. Observation: Environment Response"]
+    Observation --> MemoryUpdate["Append to Context Scratchpad"]
+    MemoryUpdate --> Thought
+    
+    Decision -->|"Yes"| FinalAnswer["5. Final Answer: Grounded Solution to User"]
+```
+
 ---
 
 ### 2. Agent Memory Types
@@ -69,6 +83,28 @@ Created by Anthropic and released as an open standard, **Model Context Protocol 
 
 #### Security: Capability Scoping and Injection Prevention
 MCP allows strict separation of concerns. The LLM never has raw database credentials. The MCP server holds the credentials and only exposes specific bounded functions. To prevent injection, all inputs are sanitized at the MCP Server layer before executing SQL or bash commands.
+
+```mermaid
+graph TD
+    subgraph HostApp["MCP Host Application (e.g. Claude Desktop / AI IDE)"]
+        User["User Prompt"] --> Host["Host Engine & LLM"]
+        Host --> Client["MCP Client"]
+    end
+    
+    Client -->|"Transport: stdio (Local) or SSE / HTTPS (Remote)"| Protocol["MCP JSON-RPC Protocol"]
+    
+    subgraph EnterpriseMCPServers["Enterprise MCP Server Layer"]
+        Protocol --> Server1["Odoo ERP MCP Server"]
+        Protocol --> Server2["PostgreSQL DB MCP Server"]
+        Protocol --> Server3["GitHub / GitLab MCP Server"]
+    end
+    
+    subgraph Primitives["3 Core MCP Primitives"]
+        Server1 --> Tools["Tools (POST): create_order, confirm_invoice"]
+        Server2 --> Resources["Resources (GET): schema, query_data"]
+        Server3 --> Prompts["Prompts: review_pr_template, bug_triage"]
+    end
+```
 
 ---
 

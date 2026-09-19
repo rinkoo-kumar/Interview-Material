@@ -49,6 +49,17 @@ QLoRA reduces memory by another $4\times$, allowing a 70B model to be fine-tuned
 2. **Double Quantization:** Quantizes the quantization constants themselves, saving 0.37 bits per parameter.
 3. **Paged Optimizers:** Uses CUDA Unified Memory to automatically page memory between GPU and CPU during memory spikes, preventing Out-Of-Memory (OOM) crashes.
 
+```mermaid
+graph LR
+    Input["Input Tokens (x)"] --> Frozen["Pre-trained Base Model W_0<br/>(Frozen, 4-bit NF4 in QLoRA)<br/>Dimensions: d x k"]
+    Input --> LoRA_A["Trainable Matrix A<br/>Gaussian Init N(0, 1/r)<br/>Dimensions: r x k"]
+    LoRA_A --> LoRA_B["Trainable Matrix B<br/>Zero Init (B = 0)<br/>Dimensions: d x r"]
+    LoRA_B --> Scaling["Scaling Factor: (alpha / r)"]
+    Frozen --> Sum["(+) Element-wise Addition"]
+    Scaling --> Sum
+    Sum --> Output["Output Activation (h)"]
+```
+
 ---
 
 ### 3. SFT Data Formats: ChatML and Alpaca
@@ -93,6 +104,22 @@ $$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w,
 - $y_l$ is the rejected ("losing") response.
 - $\beta$ controls divergence from the reference policy.
 - *Intuition:* DPO increases the log-probability of preferred answers while decreasing the log-probability of rejected answers, scaled by how much the reference model already favored them.
+
+```mermaid
+graph TD
+    subgraph TraditionalRLHF["Traditional RLHF Pipeline (Complex & Unstable)"]
+        SFT1["SFT Model"] --> RM["Train Reward Model on Human Preferences"]
+        RM --> PPO["PPO Reinforcement Learning Loop"]
+        PPO --> VRAM["Requires 4 Models in VRAM: Actor, Critic, Ref, Reward"]
+        VRAM --> Aligned1["Aligned Model"]
+    end
+
+    subgraph DirectPreferenceOpt["Direct Preference Optimization (DPO: Simple & Stable)"]
+        SFT2["SFT Model"] --> DPO_Loss["Direct Closed-Form Loss on Pairs (y_w, y_l)"]
+        DPO_Loss --> NoReward["No Reward Model, No PPO, No Sampling"]
+        NoReward --> Aligned2["Aligned Model"]
+    end
+```
 
 ---
 

@@ -20,6 +20,24 @@ CREATE INDEX idx_sale_order_partner_state ON sale_order(partner_id, state);
 -- Now: Index Scan (cost=0.56..8.58 rows=12) actual time=0.025..0.041ms ← 450x faster!
 ```
 
+```mermaid
+graph TD
+    ClientRequest["Odoo Python ORM (search / browse)"] --> SQLGen["expression.py: Generates SQL WHERE Clause"]
+    SQLGen --> PostgresQuery["PostgreSQL Server (Port 5432)"]
+    
+    subgraph PGInternals["PostgreSQL Query Engine"]
+        PostgresQuery --> Parser["1. Parser & Analyzer"]
+        Parser --> Rewriter["2. Query Rewriter"]
+        Rewriter --> Planner["3. Query Planner & Cost Estimator"]
+        Planner --> Choice{"Index Available?"}
+        Choice -->|"No Index"| SeqScan["Seq Scan: O(N) Disk Reads<br/>High Cost, Slow Response"]
+        Choice -->|"Index Match"| IndexScan["Index Scan (B-tree): O(log N)<br/>Instant Buffer Hit, 400x Faster"]
+    end
+    
+    SeqScan & IndexScan --> SharedBuffers["Shared Buffers Cache"]
+    SharedBuffers --> Result["Return Tuples to Psycopg2"]
+```
+
 - **War story:** A 30-second sales report issue was investigated. `pg_stat_statements` revealed an N+1 problem on `res.partner`. Applying a prefetch fix reduced execution time to 1.2s.
 - **`pg_stat_statements`:** An extension used to track execution statistics of all SQL statements executed, useful to find the top 10 slowest queries.
 
@@ -56,6 +74,21 @@ with self.env.cr.savepoint():
 ```
 - **`autovacuum`:** Keeps table statistics fresh and prevents table bloat from dead tuples.
 - **`VACUUM ANALYZE`:** Manual trigger for updating stale stats.
+
+```mermaid
+graph TD
+    subgraph DeadlockScenario["Deadlock: Inconsistent Locking Order"]
+        TxA["Transaction A"] -->|"1. Acquires Lock"| Row1["sale.order ID=1"]
+        TxB["Transaction B"] -->|"1. Acquires Lock"| Row2["sale.order ID=2"]
+        TxA -.->|"2. Requests Lock (Blocked!)"| Row2
+        TxB -.->|"2. Requests Lock (Blocked!)"| Row1
+        Row1 -.->|"Circular Dependency"| Row2
+    end
+    
+    subgraph Solution["Solution: Canonical ID Order / SKIP LOCKED"]
+        Canonical["Rule: Always sort record IDs before locking:<br/><code>records.sorted('id').with_context(active_test=False)</code>"]
+    end
+```
 
 ### 4. Odoo-Specific Performance Patterns
 - **Computed field optimization:** Ensure `depends` relies on MINIMAL fields.

@@ -34,6 +34,27 @@ Chain-of-Thought forces the model to generate a sequence of intermediate reasoni
 While CoT is a linear path, **Tree of Thoughts** allows the model to explore multiple reasoning paths (branches), evaluate them, and backtrack if a path seems flawed. It combines LLMs with classical search algorithms like BFS (Breadth-First Search) or DFS (Depth-First Search).
 * **Usage:** Highly complex planning, crosswords, or math proofs where a single greedy token choice can ruin the entire generation.
 
+```mermaid
+graph TD
+    subgraph ZeroShot["1. Zero-Shot"]
+        Z1["Prompt: Question"] --> Z2["LLM Output: Answer"]
+    end
+    
+    subgraph FewShot["2. Few-Shot"]
+        F1["Prompt: 3-5 Exemplars + Question"] --> F2["LLM Output: Pattern-Matched Answer"]
+    end
+    
+    subgraph CoT["3. Chain-of-Thought (Linear)"]
+        C1["Question"] --> C2["Step 1 Reasoning"] --> C3["Step 2 Reasoning"] --> C4["Final Answer"]
+    end
+    
+    subgraph ToT["4. Tree of Thoughts (Search Tree)"]
+        T0["Root Problem"] --> T1["Thought 1.1"] & T2["Thought 1.2"]
+        T1 --> T1a["Evaluation: Low Score (Prune)"]
+        T2 --> T2a["Thought 2.1 (Valid)"] --> T2b["Optimal Solution"]
+    end
+```
+
 ---
 
 ### 2. Message Roles: System, User, and Assistant Prefill
@@ -151,6 +172,21 @@ $$
 The Softmax function then converts $-\infty$ to $0$ probability:
 $$P(y_i) = \frac{e^{L'_{t, i}}}{\sum_j e^{L'_{t, j}}}$$
 This mathematically guarantees that invalid tokens (e.g., a missing quotation mark, or outputting text when an integer is required) are physically impossible for the model to sample.
+
+```mermaid
+graph LR
+    subgraph FSMDecoding["FSM-Guided Logit Masking Engine"]
+        Prompt["Input Tokens"] --> Transformer["Transformer Forward Pass"]
+        Transformer --> RawLogits["Raw Vocabulary Logits (32k)"]
+        Grammar["JSON Schema / Regex"] --> FSMState["Current FSM State (t)"]
+        FSMState --> MaskFilter["Allowed Tokens Filter (S_t)"]
+        RawLogits & MaskFilter --> LogitMask["Logit Masker: Invalid -> -Infinity"]
+        LogitMask --> Softmax["Softmax Layer"]
+        Softmax --> SampledToken["Deterministic Valid Next Token"]
+        SampledToken --> UpdateFSM["Transition to FSM State (t+1)"]
+        UpdateFSM -.-> FSMState
+    end
+```
 
 #### Java 17 Example: Structured Validation
 ```java

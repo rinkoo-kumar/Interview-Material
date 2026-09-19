@@ -19,6 +19,37 @@ Introduces pre-retrieval and post-retrieval optimizations.
 #### Modular RAG
 The enterprise standard. Treats RAG as an orchestrator of multiple specialized modules. Uses memory, structured query languages (Text-to-SQL combined with dense search), and dynamic tool calling to decide *if* it even needs to retrieve data.
 
+```mermaid
+graph TD
+    UserQuery["User Query"] --> QueryRewriter["Query Rewriter / HyDE"]
+    
+    subgraph PreRetrieval["1. Pre-Retrieval Optimization"]
+        QueryRewriter --> SparseQuery["Keywords: BM25 / SPLADE"]
+        QueryRewriter --> DenseQuery["Dense Embedding: 1536-d"]
+    end
+    
+    subgraph RetrievalLayer["2. Hybrid Retrieval Layer"]
+        SparseQuery --> BM25Index[("BM25 Inverted Index")]
+        DenseQuery --> HNSWIndex[("pgvector HNSW Graph")]
+    end
+    
+    BM25Index --> TopKBM25["Top 50 Sparse Chunks"]
+    HNSWIndex --> TopKDense["Top 50 Dense Chunks"]
+    
+    subgraph FusionRerank["3. Fusion & Re-Ranking"]
+        TopKBM25 & TopKDense --> RRF["Reciprocal Rank Fusion (RRF)"]
+        RRF --> CrossEncoder["Cross-Encoder Re-Ranker (Cohere / BGE)"]
+        CrossEncoder --> TopKFinal["Top 5 Precision Chunks"]
+    end
+    
+    subgraph Generation["4. Context Enrichment & Generation"]
+        TopKFinal --> ParentDocStore[("Parent Document Store")]
+        ParentDocStore --> AugmentedPrompt["Enriched Context + System Prompt"]
+        AugmentedPrompt --> LLM["LLM (GPT-4 / Claude 3.5 Sonnet)"]
+        LLM --> GroundedAnswer["Grounded Response with Citations"]
+    end
+```
+
 ---
 
 ### 2. Chunking Strategies
@@ -32,6 +63,23 @@ Vector databases cannot embed entire 100-page PDFs effectively due to context di
    - Small chunks (e.g., 150 tokens) produce highly precise vector representations that match user queries accurately.
    - However, 150 tokens lack sufficient context for the LLM. 
    - **Solution:** Index the 150-token "Child" chunks in the vector database, but maintain a pointer to their 1000-token "Parent" chunk. Upon match, retrieve the Parent.
+
+```mermaid
+graph LR
+    RawDoc["100-Page Enterprise Document"] --> ParentSplit["Split into Large Parent Chunks (1000 tokens)"]
+    ParentSplit --> Parent1["Parent Chunk A"] & Parent2["Parent Chunk B"]
+    
+    Parent1 --> ChildA1["Child A1 (150t)"] & ChildA2["Child A2 (150t)"]
+    Parent2 --> ChildB1["Child B1 (150t)"] & ChildB2["Child B2 (150t)"]
+    
+    ChildA1 & ChildA2 & ChildB1 & ChildB2 --> VectorDB[("Vector Index (HNSW)")]
+    Parent1 & Parent2 --> DocStore[("Document Store (S3 / PostgreSQL)")]
+    
+    UserQuery["Query"] --> VectorDB
+    VectorDB -->|"Matches Child A1"| Pointer["Lookup Parent ID: Parent Chunk A"]
+    Pointer --> DocStore
+    DocStore -->|"Fetch 1000t Context"| LLM["LLM Generation"]
+```
 
 ---
 

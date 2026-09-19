@@ -18,6 +18,22 @@ access_sale_order_manager,sale.order manager,model_sale_order,base.group_system,
 - **Programmatic check:** You can manually verify access via `self.env['sale.order'].check_access_rights('write')`.
 - **Real-world:** A SOC2 audit finding occurred when the payslip model was missing a read restriction for non-HR users, emphasizing the need for comprehensive `ir.model.access` controls.
 
+```mermaid
+graph TD
+    Request["Incoming RPC / Web Client Request"] --> L1{"Layer 1: UI / Menu Groups<br/><code>ir.ui.menu</code>"}
+    L1 -->|"Denied: Hidden in UI"| Deny1["403 / Hidden"]
+    L1 -->|"Allowed"| L2{"Layer 2: Model CRUD Rights<br/><code>ir.model.access</code>"}
+    
+    L2 -->|"AccessError: No read/write/create/unlink"| Deny2["AccessError: Operation forbidden"]
+    L2 -->|"Allowed"| L3{"Layer 3: Field-Level Groups<br/><code>groups='base.group_erp_manager'</code>"}
+    
+    L3 -->|"Restricted"| FieldMask["Field masked / excluded from payload"]
+    L3 -->|"Allowed"| L4{"Layer 4: Record Rules<br/><code>ir.rule domain_force</code>"}
+    
+    L4 -->|"Appends SQL WHERE Clause"| PostgresQuery["PostgreSQL SELECT * FROM ... WHERE (company_id IN ...)"]
+    PostgresQuery --> Result["Filtered RecordSet"]
+```
+
 > 📖 **Docs:** https://www.odoo.com/documentation/17.0/developer/reference/backend/security.html
 > 💡 **Interview Tip:** Know the AND/OR logic between global rules vs group rules.
 
@@ -56,6 +72,24 @@ with self.env['res.company']._company_context(company_id):
     self.env['account.move'].create({...})
 ```
 - **Real-world:** A 5-subsidiary manufacturing group uses a shared product catalog (no company_id), but separate GL accounts per entity.
+
+```mermaid
+graph TD
+    ParentHolding["Global Holdings Corp (ID=1)"] --> SubUS["US Subsidiary LLC (ID=2)"]
+    ParentHolding --> SubEU["EU Subsidiary BV (ID=3)"]
+    
+    subgraph ContextSwitch["User Active Environment (self.env.context)"]
+        UserContext["allowed_company_ids: [2]<br/>current company_id: 2"]
+    end
+    
+    subgraph DataPartition["Data Partitioning Rules"]
+        SharedCatalog[("Shared Catalog: product.template<br/>(company_id = NULL / False)<br/>Visible to all subsidiaries")]
+        SegregatedGL[("Segregated Ledgers: account.move<br/>(company_id = 2)<br/>Strictly isolated via ir.rule")]
+    end
+    
+    UserContext -->|"Can Read & Select"| SharedCatalog
+    UserContext -->|"Can Access ONLY company_id=2"| SegregatedGL
+```
 
 ### 4. API Authentication & Security
 - **`res.users.apikeys` (Odoo 16+):** Uses SHA-256 hashed API keys for external access.

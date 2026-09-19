@@ -14,6 +14,24 @@ A robust 10-point mandatory checklist for Odoo development teams:
 9. ✅ Demo data: new module has demo records for testing.
 10. ✅ Manifest: version bumped, dependencies properly listed.
 
+```mermaid
+graph TD
+    PR["Developer Submits Pull Request"] --> AutomatedChecks{"Stage 1: Automated CI Pipeline"}
+    AutomatedChecks -->|"Failed Lints / Broken Tests"| Reject["Auto-Reject & Notify Dev"]
+    AutomatedChecks -->|"Passed"| LeadReview{"Stage 2: Tech Lead Code Review"}
+    
+    subgraph ReviewMatrix["10-Point Architectural Review"]
+        LeadReview --> Perf["Performance: No search() in loops, proper prefetch"]
+        LeadReview --> Sec["Security: ir.model.access & multi-company rules"]
+        LeadReview --> Acid["ACID: No raw cr.commit() in business logic"]
+    end
+    
+    ReviewMatrix -->|"Changes Requested"| Feedback["Constructive Architectural Feedback"]
+    ReviewMatrix -->|"Approved"| Staging["Stage 3: Auto-Deploy to Staging Database"]
+    Staging --> UAT["User Acceptance Testing"]
+    UAT --> Production["Stage 4: Automated Tag & Production Release"]
+```
+
 ### 2. Architecture Decision Records (ADR)
 - **When to use ADR:** Any decision with significant tradeoffs, future impact, or external dependencies.
 
@@ -56,6 +74,19 @@ Action items:
   - Move heavy scheduled actions to off-peak hours (02:00 AM)
   - Add dedicated POS health check endpoint with worker bypass
   - Add POS monitoring alert for > 30s sync delay
+```
+
+```mermaid
+graph TD
+    Impact["Incident: POS Offline Sync Outage (47 mins)"] --> W1["Why? POS returned 503 Server Unavailable"]
+    W1 --> W2["Why? All 8 WSGI Prefork Workers Exhausted"]
+    W2 --> W3["Why? Heavy MRP Procurement Recompute Saturated CPU"]
+    W3 --> W4["Why? Cron Job Scheduled at Peak Retail Hour (14:00)"]
+    W4 --> W5["Root Cause: Lack of Governance for Background Cron Scheduling"]
+    
+    W5 --> Fix1["Fix 1: Reschedule Heavy Crons to 02:00 UTC"]
+    W5 --> Fix2["Fix 2: Dedicated Worker Queue for POS WebSocket Traffic"]
+    W5 --> Fix3["Fix 3: Automated Monitoring & Circuit Breaker"]
 ```
 
 > 📖 **Blog:** https://sre.google/sre-book/postmortem-culture/

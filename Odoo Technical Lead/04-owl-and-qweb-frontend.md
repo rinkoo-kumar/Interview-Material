@@ -33,7 +33,39 @@ export class SalesKPIDashboard extends Component {
 registry.category('actions').add('sales_kpi_dashboard', SalesKPIDashboard);
 ```
 - **Lifecycle:** `setup()` → `willStart()` → `mounted()` → `willUpdateProps()` → `willDestroy()`.
+
+```mermaid
+graph TD
+    subgraph OWLLifecycle["OWL 2 Reactive Component Lifecycle"]
+        Init["Constructor / Instantiation"] --> Setup["1. setup(): Declare useState, useRef, services"]
+        Setup --> WillStart["2. willStart(): Async pre-fetching data"]
+        WillStart --> Render["3. render(): Compile QWeb Template -> VDOM"]
+        Render --> Mounted["4. onMounted(): Attached to real DOM, DOM listeners"]
+        
+        StateChange["State Mutation via useState Proxy"] --> BatchUpdate["Microtask Queue (Batched)"]
+        BatchUpdate --> WillPatch["willPatch()"]
+        WillPatch --> VDOMDiff["VDOM Diff & Real DOM Patch"]
+        VDOMDiff --> Patched["patched()"]
+        
+        Destroy["Component Removed"] --> WillDestroy["5. onWillDestroy(): Clean timers & listeners"]
+    end
+```
+
 - **Real-world:** A POS offline-first with IndexedDB implementation achieved a 10x loading optimization (products loaded from IndexedDB cache instead of server call on every POS session open).
+
+```mermaid
+graph LR
+    subgraph OfflinePOS["Odoo Point of Sale: Offline-First Architecture"]
+        UserAction["Cashier Scans Barcode"] --> OWLUI["OWL 2 POS UI"]
+        OWLUI --> LocalDB[("Browser IndexedDB<br/>(Full Product & Price Cache)")]
+        LocalDB --> FastRender["Instant 16ms Response"]
+        
+        OWLUI --> OrderQueue["Local Order Queue"]
+        OrderQueue --> ServiceWorker["Background Sync Worker"]
+        ServiceWorker -->|"When Online (WebSocket / RPC)"| OdooBackend["Odoo WSGI Backend"]
+        OdooBackend --> PG[("PostgreSQL")]
+    end
+```
 
 > 📺 **Video:** Odoo OWL Framework https://www.youtube.com/@Odoo
 > 📖 **Docs:** https://github.com/odoo/owl/blob/master/doc/reference/README.md
