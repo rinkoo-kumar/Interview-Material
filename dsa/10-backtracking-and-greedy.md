@@ -56,9 +56,11 @@ Given an array of distinct integers `candidates` and a target integer `target`, 
 **Python 3 Implementation**:
 ```python
 def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
+    """Return combinations that add to target; each candidate can be reused."""
     result = []
 
     def backtrack(start_idx: int, current_path: list[int], remaining: int):
+        """Try choices from start_idx until this path reaches or passes target."""
         if remaining == 0:
             result.append(list(current_path))
             return
@@ -126,6 +128,7 @@ The $n$-queens puzzle is the problem of placing $n$ queens on an $n \times n$ ch
 **Python 3 Implementation**:
 ```python
 def solve_n_queens(n: int) -> list[list[str]]:
+    """Return every board arrangement where no queen can attack another."""
     cols = set()
     pos_diag = set()  # (r + c)
     neg_diag = set()  # (r - c)
@@ -134,6 +137,7 @@ def solve_n_queens(n: int) -> list[list[str]]:
     result = []
 
     def backtrack(r: int):
+        """Try each safe column for the queen in row r."""
         if r == n:
             result.append(["".join(row) for row in board])
             return
@@ -237,6 +241,7 @@ You are given an integer array `nums`. You are initially positioned at index `0`
 **Python 3 Implementation**:
 ```python
 def can_jump(nums: list[int]) -> bool:
+    """Return whether jumps can take you from the first index to the last."""
     max_reachable = 0
     for i, jump in enumerate(nums):
         if i > max_reachable:

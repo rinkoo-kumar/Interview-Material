@@ -73,6 +73,7 @@ Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[
 **Python 3 Implementation**:
 ```python
 def three_sum(nums: list[int]) -> list[list[int]]:
+    """Return unique groups of three numbers whose sum is zero."""
     nums.sort()
     result = []
 
@@ -162,6 +163,7 @@ graph TD
 **Python 3 Implementation**:
 ```python
 def trap(height: list[int]) -> int:
+    """Count how much rainwater can fit between the bars."""
     if not height:
         return 0
 
@@ -228,6 +230,7 @@ Given a string `s`, find the length of the longest substring without repeating c
 **Python 3 Implementation**:
 ```python
 def length_of_longest_substring(s: str) -> int:
+    """Return the length of the longest substring with no repeated characters."""
     char_index_map = {}
     left = 0
     max_len = 0

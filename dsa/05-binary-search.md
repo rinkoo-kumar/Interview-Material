@@ -75,6 +75,7 @@ Given an integer array `nums` sorted in ascending order (with distinct values) a
 **Python 3 Implementation**:
 ```python
 def search_rotated(nums: list[int], target: int) -> int:
+    """Find the target in a rotated sorted list, or return -1 if absent."""
     low, high = 0, len(nums) - 1
 
     while low <= high:
@@ -154,7 +155,9 @@ There are `n` piles of bananas. Koko can decide her eating speed $k$ (bananas/ho
 import math
 
 def min_eating_speed(piles: list[int], h: int) -> int:
+    """Find the slowest eating speed that finishes all piles within h hours."""
     def can_finish(k: int) -> bool:
+        """Check whether speed k is enough to finish before time runs out."""
         total_hours = sum(math.ceil(pile / k) for pile in piles)
         return total_hours <= h
 

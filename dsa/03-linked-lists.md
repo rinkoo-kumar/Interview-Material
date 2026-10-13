@@ -75,7 +75,10 @@ Advancing one pointer from `Head` ($L$ steps) and one from `MeetPoint` ($nC - x$
 **Python 3**:
 ```python
 class ListNode:
+    """Store one value and a link to the next list node."""
+
     def __init__(self, val: int = 0, next: 'ListNode' = None):
+        """Create a node with a value and an optional next node."""
         self.val = val
         self.next = next
 ```
@@ -104,6 +107,7 @@ Given the `head` of a singly linked list, reverse the list, and return the rever
 **Python 3 Implementation**:
 ```python
 def reverse_list(head: ListNode) -> ListNode:
+    """Reverse a linked list and return its new first node."""
     prev = None
     curr = head
     while curr:
@@ -163,6 +167,7 @@ You are given the head of a singly linked list $L_0 \to L_1 \to \dots \to L_{n-1
 **Python 3 Implementation**:
 ```python
 def reorder_list(head: ListNode) -> None:
+    """Reorder the list by alternating nodes from its start and end."""
     if not head or not head.next:
         return
 

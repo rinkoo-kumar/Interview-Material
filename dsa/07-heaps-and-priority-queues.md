@@ -97,12 +97,16 @@ Design a data structure that supports adding numbers from a data stream and find
 import heapq
 
 class MedianFinder:
+    """Track arriving numbers so their median can be found quickly."""
+
     def __init__(self):
+        """Create two heaps for the lower and upper halves of the numbers."""
         # Python heapq is min-heap; negate values to simulate max-heap
         self.small = []  # max-heap (lower half)
         self.large = []  # min-heap (upper half)
 
     def addNum(self, num: int) -> None:
+        """Add a number while keeping the two heaps balanced."""
         # Push to small (max-heap) first
         # We push negative to simulate max-heap behavior
         heapq.heappush(self.small, -num)
@@ -121,6 +125,7 @@ class MedianFinder:
             heapq.heappush(self.small, -val)
 
     def findMedian(self) -> float:
+        """Return the middle value or the mean of the two middle values."""
         if len(self.small) > len(self.large):
             return float(-self.small[0])
         return (-self.small[0] + self.large[0]) / 2.0
@@ -200,11 +205,15 @@ You are given an array of $k$ linked-lists `lists`, each sorted in ascending ord
 import heapq
 
 class ListNode:
+    """Store one linked-list value and a link to the next node."""
+
     def __init__(self, val=0, next=None):
+        """Create a node with a value and an optional next node."""
         self.val = val
         self.next = next
 
 def merge_k_lists(lists: list[ListNode]) -> ListNode:
+    """Merge k sorted linked lists into one sorted linked list."""
     dummy = ListNode(0)
     curr = dummy
     heap = []

@@ -25,6 +25,7 @@ Given an integer array `nums`, return an array `answer` such that `answer[i]` is
 #### Python 3 Implementation:
 ```python
 def product_except_self(nums: list[int]) -> list[int]:
+    """Return each position's product of all the other numbers."""
     n = len(nums)
     res = [1] * n
 
@@ -104,6 +105,7 @@ Given an array of integers `nums` and an integer `k`, return the total number of
 from collections import defaultdict
 
 def subarray_sum(nums: list[int], k: int) -> int:
+    """Count continuous parts of nums whose values add up to k."""
     count = 0
     current_sum = 0
     prefix_map = defaultdict(int)
@@ -177,6 +179,7 @@ Given two strings `s` and `t`, return the minimum window substring of `s` such t
 from collections import Counter
 
 def min_window(s: str, t: str) -> str:
+    """Return the shortest part of s that contains every character in t."""
     if not s or not t:
         return ""
 
@@ -290,6 +293,7 @@ Given an array `nums` with $n$ objects colored red (0), white (1), or blue (2), 
 #### Python 3 Implementation:
 ```python
 def sort_colors(nums: list[int]) -> None:
+    """Sort a list of 0s, 1s, and 2s in place."""
     low, mid, high = 0, 0, len(nums) - 1
 
     while mid <= high:

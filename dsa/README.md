@@ -5,6 +5,8 @@ Welcome to the **Comprehensive DSA Track** engineered for technical interviews a
 
 This curriculum follows the gold standard of modern algorithmic pedagogy (similar to NeetCode 150, Striver's SDE Sheet, and MIT 6.006), featuring **14 Core Algorithmic Patterns** with dual **Python** and **Java** reference implementations, time/space complexity analysis, and standard course best practices.
 
+> **New to DSA or want a daily plan?** Start with the [30-Day DSA Mastery Roadmap](30-day-mastery/README.md), which links to simple-language guides for each topic.
+
 ---
 
 ## 🗺️ Master Algorithmic Curriculum

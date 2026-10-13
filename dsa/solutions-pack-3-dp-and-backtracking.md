@@ -29,6 +29,7 @@ Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` 
 #### Python 3 Implementation:
 ```python
 def word_break(s: str, word_dict: list[str]) -> bool:
+    """Return whether s can be split into words from word_dict."""
     word_set = set(word_dict)
     dp = [False] * (len(s) + 1)
     dp[0] = True  # Empty string is valid
@@ -99,6 +100,7 @@ A message containing letters from A-Z can be encoded into numbers using the mapp
 #### Python 3 Implementation:
 ```python
 def num_decodings(s: str) -> int:
+    """Count ways to decode the digit string using 1-to-26 letter codes."""
     if not s or s[0] == '0':
         return 0
 
@@ -181,6 +183,7 @@ Given an input string `s` and a pattern `p`, implement regular expression matchi
 #### Python 3 Implementation:
 ```python
 def is_match(s: str, p: str) -> bool:
+    """Return whether s fully matches p, where dot and star are special."""
     m, n = len(s), len(p)
     dp = [[False] * (n + 1) for _ in range(m + 1)]
     dp[0][0] = True

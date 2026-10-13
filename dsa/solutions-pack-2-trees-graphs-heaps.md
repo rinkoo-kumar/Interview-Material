@@ -28,6 +28,7 @@ Given two words `beginWord` and `endWord`, and a dictionary `wordList`, return t
 from collections import deque
 
 def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
+    """Return the shortest one-letter word-change sequence length, or zero."""
     word_set = set(word_list)
     if end_word not in word_set:
         return 0
@@ -141,16 +142,23 @@ Design an algorithm to serialize and deserialize a binary tree.
 #### Python 3 Implementation:
 ```python
 class TreeNode:
+    """Represent one binary-tree value and its child links."""
+
     def __init__(self, x):
+        """Create a tree node with value x and no children."""
         self.val = x
         self.left = None
         self.right = None
 
 class Codec:
+    """Convert a binary tree to text and rebuild it from that text."""
+
     def serialize(self, root: TreeNode) -> str:
+        """Turn a tree into a string that preserves its structure."""
         """Encodes a tree to a single string."""
         vals = []
         def dfs(node):
+            """Write this node and recursively write its children."""
             if not node:
                 vals.append("#")
                 return
@@ -161,9 +169,11 @@ class Codec:
         return ",".join(vals)
 
     def deserialize(self, data: str) -> TreeNode:
+        """Rebuild the tree represented by the serialized string."""
         """Decodes your encoded data to tree."""
         tokens = iter(data.split(","))
         def dfs():
+            """Read the next value and rebuild its subtree."""
             val = next(tokens)
             if val == "#":
                 return None
@@ -266,6 +276,7 @@ There is a foreign language which uses the Latin alphabet. Given a list of words
 from collections import defaultdict, deque
 
 def alien_order(words: list[str]) -> str:
+    """Return a letter order consistent with the sorted alien-language words."""
     adj = {c: set() for word in words for c in word}
     indegree = {c: 0 for c in adj}
 

@@ -75,6 +75,7 @@ Given an array of integers `temperatures`, return an array `answer` such that `a
 **Python 3 Implementation**:
 ```python
 def daily_temperatures(temperatures: list[int]) -> list[int]:
+    """For each day, count days until a warmer temperature or return zero."""
     n = len(temperatures)
     result = [0] * n
     stack = []  # indices of decreasing temperatures
@@ -132,6 +133,7 @@ Given an array of integers `heights` representing the histogram's bar height whe
 **Python 3 Implementation**:
 ```python
 def largest_rectangle_area(heights: list[int]) -> int:
+    """Find the largest rectangle that fits under the histogram bars."""
     stack = []  # stores (index, height)
     max_area = 0
 
@@ -190,6 +192,7 @@ Given an array of integers `nums` and a sliding window of size `k`, return the m
 from collections import deque
 
 def max_sliding_window(nums: list[int], k: int) -> list[int]:
+    """Return the maximum number in each window of size k."""
     q = deque()  # stores indices, values are strictly decreasing
     result = []
 

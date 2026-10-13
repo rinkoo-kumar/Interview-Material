@@ -86,7 +86,10 @@ graph TD
 **Python 3**:
 ```python
 class TreeNode:
+    """Represent one binary-tree value and its child links."""
+
     def __init__(self, val: int = 0, left=None, right=None):
+        """Create a tree node with a value and optional children."""
         self.val = val
         self.left = left
         self.right = right
@@ -119,12 +122,16 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes `p
 **Python 3 Implementation**:
 ```python
 class TreeNode:
+    """Represent one binary-tree value and its child links."""
+
     def __init__(self, val=0, left=None, right=None):
+        """Create a tree node with a value and optional children."""
         self.val = val
         self.left = left
         self.right = right
 
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+    """Find the lowest node that has both p and q below it."""
     # Base case: if we hit a null node, or find p or q, return the current node
     if not root or root == p or root == q:
         return root
@@ -220,9 +227,11 @@ A path in a binary tree is a sequence of nodes where each pair of adjacent nodes
 **Python 3 Implementation**:
 ```python
 def max_path_sum(root: TreeNode) -> int:
+    """Return the largest sum along any path through the binary tree."""
     max_sum = float('-inf')
 
     def dfs(node: TreeNode) -> int:
+        """Return the best downward path sum that starts at this node."""
         nonlocal max_sum
         if not node:
             return 0
@@ -316,15 +325,22 @@ Implement a Trie with `insert`, `search`, and `startsWith` methods.
 **Python 3 Implementation**:
 ```python
 class TrieNode:
+    """Hold a letter's child links and whether a word ends here."""
+
     def __init__(self):
+        """Create an empty trie node."""
         self.children = {}
         self.is_end_of_word = False
 
 class Trie:
+    """Store words for fast whole-word and prefix lookups."""
+
     def __init__(self):
+        """Create an empty trie."""
         self.root = TrieNode()
 
     def insert(self, word: str) -> None:
+        """Add a word to the trie, creating nodes for missing letters."""
         # Traverse the trie, adding nodes for each character if they don't exist
         curr = self.root
         for char in word:
@@ -335,6 +351,7 @@ class Trie:
         curr.is_end_of_word = True
 
     def search(self, word: str) -> bool:
+        """Return whether the trie contains this complete word."""
         # Traverse the trie to check if the exact word exists
         curr = self.root
         for char in word:
@@ -344,6 +361,7 @@ class Trie:
         return curr.is_end_of_word
 
     def startsWith(self, prefix: str) -> bool:
+        """Return whether any stored word begins with this prefix."""
         # Traverse the trie to check if any word starts with the given prefix
         curr = self.root
         for char in prefix:

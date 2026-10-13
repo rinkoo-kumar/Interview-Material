@@ -108,6 +108,7 @@ Given an array of integers `nums` and an integer `target`, return indices of the
 **Python 3 Implementation**:
 ```python
 def two_sum(nums: list[int], target: int) -> list[int]:
+    """Return the indices of two numbers that add up to the target."""
     seen: dict[int, int] = {}  # num -> index
     for i, num in enumerate(nums):
         complement = target - num
@@ -164,6 +165,7 @@ Given an array of strings `strs`, group the anagrams together.
 from collections import defaultdict
 
 def group_anagrams(strs: list[str]) -> list[list[str]]:
+    """Group together words that contain the same letters."""
     groups = defaultdict(list)
     for s in strs:
         # Build 26-element character count tuple as immutable hashable key
@@ -223,6 +225,7 @@ Given an integer array `nums` and an integer `k`, return the `k` most frequent e
 from collections import Counter
 
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    """Return the k numbers that appear most often."""
     count = Counter(nums)
     # Buckets where index = frequency, value = list of numbers with that frequency
     buckets = [[] for _ in range(len(nums) + 1)]

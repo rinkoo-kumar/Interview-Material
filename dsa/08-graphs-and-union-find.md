@@ -95,6 +95,7 @@ There are a total of `numCourses` you have to take, labeled from `0` to `numCour
 from collections import deque, defaultdict
 
 def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
+    """Return a valid course order, or an empty list if courses form a cycle."""
     adj = defaultdict(list)
     indegree = [0] * num_courses
 
@@ -188,6 +189,7 @@ import heapq
 from collections import defaultdict
 
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
+    """Return when all nodes receive the signal, or -1 if some cannot."""
     adj = defaultdict(list)
     for u, v, w in times:
         adj[u].append((v, w))
@@ -276,17 +278,22 @@ Return an edge that can be removed so that the resulting graph is a tree of `n` 
 **Python 3 Implementation**:
 ```python
 class DSU:
+    """Track which items belong to the same connected group."""
+
     def __init__(self, size: int):
+        """Start with each item in its own group."""
         self.parent = list(range(size + 1))
         self.rank = [1] * (size + 1)
 
     def find(self, x: int) -> int:
+        """Return x's group leader and shorten its path to that leader."""
         if self.parent[x] != x:
             # Path compression: repoint directly to the root
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
     def union(self, x: int, y: int) -> bool:
+        """Join two groups and report whether they were separate before."""
         root_x, root_y = self.find(x), self.find(y)
         if root_x == root_y:
             return False  # Cycle detected!
@@ -302,6 +309,7 @@ class DSU:
         return True
 
 def find_redundant_connection(edges: list[list[int]]) -> list[int]:
+    """Return the edge that first joins nodes already in the same group."""
     dsu = DSU(len(edges))
     for u, v in edges:
         if not dsu.union(u, v):

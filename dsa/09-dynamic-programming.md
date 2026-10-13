@@ -63,6 +63,7 @@ Given an integer array `coins` and an integer `amount`, return the fewest number
 **Python 3 Implementation**:
 ```python
 def coin_change(coins: list[int], amount: int) -> int:
+    """Return the fewest coins needed, or -1 if the amount cannot be made."""
     dp = [float('inf')] * (amount + 1)
     dp[0] = 0
 
@@ -123,6 +124,7 @@ Given an integer array `nums`, return the length of the longest strictly increas
 from bisect import bisect_left
 
 def length_of_lis(nums: list[int]) -> int:
+    """Return the length of the longest strictly increasing subsequence."""
     tails = []  # tails[i] stores smallest tail of all increasing subsequences of length i+1
 
     for x in nums:
@@ -185,6 +187,7 @@ Given two strings `word1` and `word2`, return the minimum number of operations (
 **Python 3 Implementation**:
 ```python
 def min_distance(word1: str, word2: str) -> int:
+    """Return the fewest single-letter edits needed to change word1 into word2."""
     m, n = len(word1), len(word2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
 
