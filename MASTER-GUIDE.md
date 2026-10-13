@@ -1,7 +1,6 @@
 # 🎯 Complete Interview Preparation Master Guide
 ## Theory + Practice + Real-World Examples + Video References + Blog Links
 
-> **For**: Rinkoo Kumar (Senior Software Engineer / Technical Lead, 7+ years Odoo)
 > **Goal**: Complete preparation for Senior Software Engineer, Odoo Technical Lead, Techno-Functional Lead, and Senior AI Engineer roles at product-based companies
 
 ---
